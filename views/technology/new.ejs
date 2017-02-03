@@ -1,0 +1,34 @@
+<% include ../partials/head.ejs %>
+
+<body>
+<main>
+<h1 class="center">Add New Technology</h1>
+<div class="row">
+    <form action="/technologies" method="POST" class="col s12">
+      <div class="row">
+        <div class="input-field col s4">
+          <label class="active">Name</label>
+          <input type="text" name="name" />
+        </div>
+        <div class="input-field col s4">
+          <textarea id="textarea1" class="materialize-textarea" name="description"></textarea>
+          <label for="textarea1">Synopsis</label>
+        </div>
+        <div class="input-field col s4">
+          <textarea id="textarea1" class="materialize-textarea" name="documentation"></textarea>
+          <label for="textarea1">Synopsis</label>
+        </div>
+        <div class="input-field col s4">
+          <textarea id="textarea1" class="materialize-textarea" name="use-case"></textarea>
+          <label for="textarea1">Synopsis</label>
+        </div>
+        <div class="input-field col s4">
+        <button class="btn waves-effect waves-light" type="submit" name="action" style="margin-bottom: 10px">Add Movie
+        <i class="material-icons right">add</i>
+        </button>
+      </div>
+      </div>
+    </form>
+  </div>
+</main>
+</body>

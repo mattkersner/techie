@@ -10,6 +10,12 @@ router.get('/', function(req, res, next) {
   });
 });
 
+router.get('/new', function(req, res, next) {
+  res.render('technology/new', {
+
+  });
+});
+
 router.get('/:id', function(req, res, next) {
   models.Technology.findById(req.params.id).then(function(technology) {
     res.render('technology/details', { technology: technology });
