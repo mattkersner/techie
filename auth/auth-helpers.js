@@ -25,3 +25,16 @@ function createUser(req, res) {
     skills: req.body.skills
   });
 }
+
+function loginRequired(req, res, next) {
+  if (!req.user) res.redirect('/auth/login');
+
+  return next();
+}
+
+module.exports = {
+  comparePass,
+  loginRedirect,
+  createUser,
+  loginRequired
+}
