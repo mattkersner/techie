@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
+  <% include partials/head.ejs %>
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
@@ -33,6 +30,7 @@
       <a href="technologies">Technologies Index - All</a>
     </div>
 
+    <button ><a href="/technologies/new">Add New Technology<i class="material-icons right">add</i></a></button>
 
   </body>
 </html>
