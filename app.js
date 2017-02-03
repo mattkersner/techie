@@ -11,6 +11,7 @@ const passport = require('passport');
 //require routes and set to variables
 const index = require('./routes/index');
 const user = require('./routes/user');
+const categories = require('./routes/categories');
 
 
 const app = express();
@@ -44,6 +45,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //app.use routes, always after middleware
 app.use('/', index);
 app.use('/user', user);
+app.use('/categories', categories);
 
 
 // catch 404 and forward to error handler
