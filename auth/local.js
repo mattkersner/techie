@@ -9,6 +9,7 @@ const options = {};
 
 init();
 
+//passport local strategy for authenticated a users password and allowing them to login
 passport.use(new LocalStrategy(options, (username, password, done) => {
   //check to see if the username exists
   models.User.findOne({
