@@ -1,30 +1,41 @@
-
-
+<% include ../partials/head.ejs %>
 <main>
  <table>
     <tbody>
-       <tr>
-            <td >Name:</td>
-            <td><span><%= technology.name %></span></td>
+     <tr>
+        <td >Name:</td>
+        <td><span><%= technology.name %></span></td>
+      </tr>
+      <tr>
+        <td >Description:</td>
+        <td><%= technology.description %></td>
 
-          </tr>
-          <tr>
-            <td >Description:</td>
-            <td><%= technology.description %></td>
+      </tr>
+      <tr>
+        <td >Link to Docs:</td>
+        <td><a href="<%= technology.documentation %>"><%= technology.documentation %></a></td>
 
-          </tr>
-          <tr>
-            <td >Link to Docs:</td>
-            <td><a href="<%= technology.documentation %>"><%= technology.documentation %></a></td>
+      </tr>
+      <tr>
+        <td >See Example:</td>
+        <td><a href="<%= technology.use_case %>"><%= technology.use_case %></a></td>
+      </tr>
 
-          </tr>
-          <tr>
-            <td >See Example:</td>
-            <td><a href="<%= technology.use_case %>"><%= technology.use_case %></a></td>
+    </tbody>
+  </table>
+<form action="/favorites" method="POST">
+  <button class="btn waves-effect waves-light" type="submit" name="action">Fave
+    <i class="material-icons right">add</i>
+  </button>
+</form>
 
-          </tr>
-        </tbody>
-      </table>
 
+
+<div>
+  <p>Todo: Review Section here</p>
+</div>
 
 <a href="<%= '/technologies' %>">Back to Technologies List</a>
+
+
+
