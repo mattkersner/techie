@@ -1,0 +1,11 @@
+
+<h1 class="center">Technologies</h1>
+      <!-- <button class="btn"><a href="movies/new" class="add-movie">Add New Movie<i class="material-icons right">add</i></a></button> -->
+    <ul>
+
+        <% technology.forEach(function(technology) { %>
+        <li>
+          <a href="<%= `/technologies/${technology.id}` %>"><%= technology.name %></a>
+          </li>
+        <% }); %>
+</ul>
