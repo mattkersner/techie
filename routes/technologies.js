@@ -16,6 +16,17 @@ router.get('/new', function(req, res, next) {
   });
 });
 
+router.post('/',function(req, res, next) {
+  models.Technology.create({
+    name: req.body.name,
+    description: req.body.description,
+    documentation: req.body.documentation,
+    use_case: req.body.use_case
+  }).then(function() {
+    res.redirect('/technologies');
+  });
+});
+
 router.get('/:id', function(req, res, next) {
   models.Technology.findById(req.params.id).then(function(technology) {
     res.render('technology/details', { technology: technology });
