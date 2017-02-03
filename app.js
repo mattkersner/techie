@@ -10,11 +10,10 @@ const passport = require('passport');
 
 //require routes and set to variables
 const index = require('./routes/index');
+const technologies = require('./routes/technologies');
 const authRoutes = require('./routes/auth');
 const userRoutes = require('./routes/user');
 const categories = require('./routes/categories');
-
-
 const app = express();
 
 //override with POST having ?_method
@@ -51,9 +50,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //app.use routes, always after middleware
 app.use('/', index);
+app.use('/technologies', technologies);
 app.use('/auth', authRoutes);
 app.use('/user', userRoutes);
 app.use('/categories', categories);
+
 
 
 // catch 404 and forward to error handler
