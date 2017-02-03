@@ -12,13 +12,13 @@ module.exports = {
         type: Sequelize.STRING(255)
       },
       description: {
-        type: Sequelize.STRING(255)
+        type: Sequelize.TEXT
       },
       documentation: {
-        type: Sequelize.STRING(255)
+        type: Sequelize.TEXT
       },
       use_case: {
-        type: Sequelize.STRING(255)
+        type: Sequelize.TEXT
       },
       createdAt: {
         allowNull: false,
