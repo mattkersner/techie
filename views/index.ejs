@@ -7,7 +7,32 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %>
-      <a href="categories">Tech Categories</a>
+    <div>
+      <p>Not logged in:</p>
+      <ul>
+        <li><a href="auth/register">Register</a></li>
+        <li><a href="auth/login">Login</a></li>
+      </ul>
+    <p>Logged in:</p>
+      <ul>
+        <li><a href="/user">User Page/Dashboard</a></li>
+        <li><a href="/auth/logout">Logout</a></li>
+      </ul>
+    </div>
+    <div>
+      <a href="categories">Categories Index - All</a>
+      <ul>
+        <li><a href="categories/Language">Language Icon</a></li>
+        <li><a href="categories/Library">Library Icon</a></li>
+        <li><a href="categories/Framework">Framework Icon</a></li>
+        <li><a href="categories/Styling">Styling Icon</a></li>
+        <li><a href="categories/Module">Module Icon</a></li>
+      </ul>
+    </div>
+    <div>
+      <a href="technologies">Technologies Index - All</a>
+    </div>
+
     </p>
   </body>
 </html>
