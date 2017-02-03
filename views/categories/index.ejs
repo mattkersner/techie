@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<main>
+    <h1>Categories</h1>
+    <% categories.forEach(function(category) { %>
+      <div>
+        <p><%= category.id %>:
+          <a href="<%= `/categories/${category.name}` %>">
+            <%= category.name %>
+          </a>
+        </p>
+      </div>
+    <% }); %>
+</main>
+</body>
+</html>
