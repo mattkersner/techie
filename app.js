@@ -10,9 +10,10 @@ const passport = require('passport');
 
 //require routes and set to variables
 const index = require('./routes/index');
-const user = require('./routes/user');
 const technologies = require('./routes/technologies');
-
+const authRoutes = require('./routes/auth');
+const userRoutes = require('./routes/user');
+const categories = require('./routes/categories');
 const app = express();
 
 //override with POST having ?_method
@@ -31,7 +32,13 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 //express session and passport middleware
-
+app.use(session({
+  secret: process.env.SECRET_KEY,
+  resave: false,
+  saveUninitialized: true
+}));
+app.use(passport.initialize());
+app.use(passport.session());
 app.use(cookieParser());
 app.use(require('node-sass-middleware')({
   src: path.join(__dirname, 'public'),
@@ -43,8 +50,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //app.use routes, always after middleware
 app.use('/', index);
-app.use('/user', user);
 app.use('/technologies', technologies);
+app.use('/auth', authRoutes);
+app.use('/user', userRoutes);
+app.use('/categories', categories);
+
 
 
 // catch 404 and forward to error handler
