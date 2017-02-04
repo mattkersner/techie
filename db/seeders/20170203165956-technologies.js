@@ -9,7 +9,8 @@ module.exports = {
         documentation: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
         use_case: 'http://www.samdallyn.co.uk/',
         createdAt: '2017-02-03',
-        updatedAt: '2017-02-03'
+        updatedAt: '2017-02-03',
+        category_name: 'Language'
       },
       {
         name: 'CSS',
@@ -17,7 +18,8 @@ module.exports = {
         documentation: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
         use_case: 'http://www.mindvalley.com/',
         createdAt: '2017-02-03',
-        updatedAt: '2017-02-03'
+        updatedAt: '2017-02-03',
+        category_name:'Styling'
       },
       {
         name: 'JavaScript',
@@ -25,7 +27,8 @@ module.exports = {
         documentation: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
         use_case: 'http://clickonitlondon.co.uk/',
         createdAt: '2017-02-03',
-        updatedAt: '2017-02-03'
+        updatedAt: '2017-02-03',
+        category_name: 'Language'
       },
       {
         name: 'jQuery',
@@ -33,7 +36,8 @@ module.exports = {
         documentation: 'http://api.jquery.com/',
         use_case: 'http://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_hide_p',
         createdAt: '2017-02-03',
-        updatedAt: '2017-02-03'
+        updatedAt: '2017-02-03',
+        category_name: 'Library'
       },
       {
         name: 'Express',
@@ -41,7 +45,8 @@ module.exports = {
         documentation: 'https://expressjs.com/',
         use_case: 'https://shrouded-island-56694.herokuapp.com/',
         createdAt: '2017-02-03',
-        updatedAt: '2017-02-03'
+        updatedAt: '2017-02-03',
+        category_name: 'Framework'
       },
       {
         name: 'body-parser',
@@ -49,7 +54,8 @@ module.exports = {
         documentation: 'https://github.com/expressjs/body-parser',
         use_case: 'https://shrouded-island-56694.herokuapp.com/',
         createdAt: '2017-02-03',
-        updatedAt: '2017-02-03'
+        updatedAt: '2017-02-03',
+        category_name: 'Module'
       }
     ], {});
   }
