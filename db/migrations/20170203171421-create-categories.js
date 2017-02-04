@@ -11,9 +11,6 @@ module.exports = {
       name: {
         type: Sequelize.STRING(50)
       },
-      tech_id: {
-        type: Sequelize.STRING
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
