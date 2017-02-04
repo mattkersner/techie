@@ -4,7 +4,8 @@ module.exports = function(sequelize, DataTypes) {
     name: DataTypes.STRING(255),
     description: DataTypes.TEXT,
     documentation: DataTypes.TEXT,
-    use_case: DataTypes.TEXT
+    use_case: DataTypes.TEXT,
+
   }, {
     classMethods: {
       associate: function(models) {

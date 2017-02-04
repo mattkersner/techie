@@ -10,6 +10,17 @@
           <label class="active">Name</label>
           <input type="text" name="name" />
         </div>
+        <div class="input-field col s12">
+          <select>
+            <option value="" disabled selected>Choose a category</option>
+            <option value="1">Language</option>
+            <option value="2">Library</option>
+            <option value="3">Framework</option>
+            <option value="3">Styling</option>
+            <option value="3">Module</option>
+          </select>
+          <label>Category</label>
+  </div>
         <div class="input-field col s4">
           <label for="textarea1">Description</label><br/>
           <textarea id="textarea1" class="materialize-textarea" name="description"></textarea>
@@ -31,4 +42,9 @@
     </form>
   </div>
 </main>
+<script>
+  $(document).ready(function() {
+      $('select').material_select();
+    });
+</script>
 </body>
