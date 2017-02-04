@@ -18,4 +18,21 @@ router.get('/Language', function(req, res, next) {
   res.render('categories/language');
 });
 
+router.get('/Library', function(req, res, next) {
+  res.render('categories/library');
+});
+
+router.get('/Framework', function(req, res, next) {
+  res.render('categories/framework');
+});
+
+router.get('/Styling', function(req, res, next) {
+  res.render('categories/styling');
+});
+
+router.get('/Module', function(req, res, next) {
+  res.render('categories/module');
+});
+
+
 module.exports = router;
