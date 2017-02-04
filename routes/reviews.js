@@ -2,6 +2,11 @@ const express = require('express');
 const router = express.Router();
 const models = require('../db/models/index');
 
+router.get('/', function(req, res) {
+  res.render('review/reviewform');
+})
+
+
 router.post('/', function(req, res) {
   models.Reviews.create({
     user_id: req.body.user_id,
