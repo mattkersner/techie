@@ -1,5 +1,4 @@
 <% include ../partials/head.ejs %>
-
 <main>
  <table>
     <tbody>
@@ -19,7 +18,21 @@
           <td >See Example:</td>
           <td><a href="<%= technology.use_case %>"><%= technology.use_case %></a></td>
         </tr>
+        <tr>
+          <td >Category:</td>
+          <td><%= technology.category_name %></td>
+        </tr>
     </tbody>
   </table>
-
+<form action="/favorites" method="POST">
+  <button class="btn waves-effect waves-light" type="submit" name="action">Fave
+    <i class="material-icons right">add</i>
+  </button>
+</form>
 <a href="<%= '/technologies' %>">Back to Technologies List</a>
+<div>
+  <p>Todo: Review Section here</p>
+</div>
+
+</main>
+
