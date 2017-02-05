@@ -24,11 +24,13 @@
         </tr>
     </tbody>
   </table>
-<form action="/favorites" method="POST">
-  <button class="btn waves-effect waves-light" type="submit" name="action">Fave
-    <i class="material-icons right">add</i>
-  </button>
-</form>
+<% if (user !== undefined) { %>
+  <form action="favorites" method="POST">
+    <button class="btn waves-effect waves-light" type="submit" name="action">Fave
+      <i class="material-icons right">add</i>
+    </button>
+  </form>
+<% } %>
 <a href="<%= '/technologies' %>">Back to Technologies List</a>
 <div>
   <p>Todo: Review Section here</p>

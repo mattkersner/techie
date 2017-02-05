@@ -30,7 +30,19 @@ router.post('/',function(req, res, next) {
 
 router.get('/:id', function(req, res, next) {
   models.Technology.findById(req.params.id).then(function(technology) {
-    res.render('technology/details', { technology: technology });
+    res.render('technology/details', {
+      technology: technology,
+      user: req.user // passes in req user id
+      });
+  });
+});
+
+router.post('/favorites', function(req, res, next) {
+  models.Favorites.create({
+    user_id: 1,
+    tech_id: 6
+  }).then(function() {
+    res.redirect('/technologies');
   });
 });
 
