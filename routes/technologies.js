@@ -21,7 +21,8 @@ router.post('/',function(req, res, next) {
     name: req.body.name,
     description: req.body.description,
     documentation: req.body.documentation,
-    use_case: req.body.use_case
+    use_case: req.body.use_case,
+    category_name: req.body.category_name
   }).then(function() {
     res.redirect('/technologies');
   });
