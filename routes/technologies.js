@@ -40,7 +40,7 @@ router.get('/:id', function(req, res, next) {
 router.post('/favorites', function(req, res, next) {
   models.Favorites.create({
     user_id: req.user.id, // properly passing user id
-    tech_id: req.params.id // null atm
+    tech_id: req.body.tech_id // pulling from views
   }).then(function() {
     res.redirect('/technologies');
   });
