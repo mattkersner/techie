@@ -7,7 +7,7 @@
     <h1>Libraries:</h1>
     <ol>
     <% techs.forEach(function(data) { %>
-      <li><%= data.name %></li>
+      <li><a href="<%= `/technologies/${data.id}` %>"><%= data.name %></a></li>
     <% }); %>
     </ol>
 </main>
