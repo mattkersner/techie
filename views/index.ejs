@@ -5,11 +5,13 @@
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
     <div>
-      <p>Not logged in:</p>
+
+    <% if (!user) { %>
       <ul>
         <li><a href="auth/register">Register</a></li>
         <li><a href="auth/login">Login</a></li>
       </ul>
+      <% } %>
     <p>Logged in:</p>
       <ul>
         <li><a href="/user">User Page/Dashboard</a></li>

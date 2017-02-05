@@ -24,23 +24,25 @@
         </tr>
     </tbody>
   </table>
- <div>
+
 <% if (user) { %>
-<a href="<%= `/technologies/${technology.id}/edit` %>">
-<button class="btn waves-effect waves-light" type="submit" name="action">Edit this Technology
-</button></a>
-<% } %>
-</div>
-<div class="right-align">
-<% if (user !== undefined) { %>
+  <!-- button to favorite -->
   <form action="favorites" method="POST">
     <input style="display:none" value="<%= technology.id %>" name="tech_id">
     <button class="btn waves-effect waves-light" type="submit" name="action">Fave
       <i class="material-icons right">add</i>
     </button>
   </form>
+  <!-- button to edit tech details -->
+  <a href="<%= `/technologies/${technology.id}/edit` %>">
+<button class="btn waves-effect waves-light" type="submit" name="action">Edit this Technology
+</button></a>
 <% } %>
-</div>
+
+<% if (!user) { %>
+  <a href="<%= '/auth/login' %>">Login to edit this page or add to Favorites</a>
+<% } %>
+
 <p><a href="<%= '/technologies' %>">Back to Technologies List</a></p>
 <p><a href="<%= '/categories' %>">Back to Categories</a></p>
 <p><a href="<%= '/' %>">Back to Home Page</a></p>
