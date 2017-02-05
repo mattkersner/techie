@@ -21,7 +21,8 @@ router.post('/',function(req, res, next) {
     name: req.body.name,
     description: req.body.description,
     documentation: req.body.documentation,
-    use_case: req.body.use_case
+    use_case: req.body.use_case,
+    category_name: req.body.category_name
   }).then(function() {
     res.redirect('/technologies');
   });
@@ -29,7 +30,19 @@ router.post('/',function(req, res, next) {
 
 router.get('/:id', function(req, res, next) {
   models.Technology.findById(req.params.id).then(function(technology) {
-    res.render('technology/details', { technology: technology });
+    res.render('technology/details', {
+      technology: technology,
+      user: req.user // passes in req user id
+      });
+  });
+});
+
+router.post('/favorites', function(req, res, next) {
+  models.Favorites.create({
+    user_id: req.user.id, // properly passing user id
+    tech_id: req.body.tech_id // pulling from views
+  }).then(function() {
+    res.redirect('/user');
   });
 });
 
