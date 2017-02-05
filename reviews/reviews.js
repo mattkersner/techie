@@ -8,7 +8,7 @@ function getReviews(req, res, next) {
     // don't need metadata in the response
     type: models.sequelize.QueryTypes.SELECT
   }).then((reviews) => {
-    console.log(res);
+    console.log(reviews);
     // setting res.locals object to access in the response
     res.locals.reviews = reviews;
     // next function

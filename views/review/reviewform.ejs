@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Reviews</title>
-</head>
+<% include ../partials/head.ejs %>
 <body>
-<h1>Review Form</h1>
+  <form action="reviews" method="post">
+      <div class="input-field">
+        <label class="active">Title:</label>
+        <input type="text" name="title" />
+      </div>
+      <div class="input-field">
+        <label for="textarea1">Review:</label><br/>
+        <textarea id="textarea1" class="materialize-textarea" name="review_text"></textarea>
+      </div>
+      <div>
+        <button type="submit" name="action">Submit</button>
+      </div>
+  </form>
 </body>
 </html>
