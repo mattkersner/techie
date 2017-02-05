@@ -42,7 +42,7 @@ router.post('/favorites', function(req, res, next) {
     user_id: req.user.id, // properly passing user id
     tech_id: req.body.tech_id // pulling from views
   }).then(function() {
-    res.redirect('/technologies');
+    res.redirect('/user');
   });
 });
 
