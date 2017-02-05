@@ -11,12 +11,13 @@
         <li><a href="auth/register">Register</a></li>
         <li><a href="auth/login">Login</a></li>
       </ul>
-      <% } %>
-    <p>Logged in:</p>
+
+      <% } else { %>
       <ul>
         <li><a href="/user">User Page/Dashboard</a></li>
         <li><a href="/auth/logout">Logout</a></li>
       </ul>
+      <% } %>
     </div>
     <div>
       <a href="categories">Categories Index - All</a>
