@@ -1,0 +1,48 @@
+<% include ../partials/head.ejs %>
+<body>
+<main>
+<form action="<%= `/technologies/${tech.id}?_method=PUT` %>" method="POST">
+<div class="row">
+        <div class="input-field col s4">
+          <label class="active">Name</label>
+          <input type="text" name="name" value="<%= tech.name %>" />
+        </div>
+        <div class="input-field col s12">
+          <select name="category_name">
+            <option disabled selected>Choose a category</option>
+            <option value="Language">Language</option>
+            <option value="Library">Library</option>
+            <option value="Framework">Framework</option>
+            <option value="Styling">Styling</option>
+            <option value="Module">Module</option>
+          </select>
+          <label>Category</label>
+  </div>
+        <div class="input-field col s4">
+          <label for="textarea1">Description</label><br/>
+          <textarea id="textarea1" class="materialize-textarea" name="description"><%= tech.description %></textarea>
+        </div>
+        <div class="input-field col s4">
+          <label for="textarea1">Link to Official Documentation</label><br/>
+          <textarea id="textarea1" class="materialize-textarea" name="documentation"><%= tech.documentation %></textarea>
+        </div>
+        <div class="input-field col s4">
+          <label for="textarea1">Use-Case of Technology</label><br/>
+          <textarea id="textarea1" class="materialize-textarea" name="use_case"><%= tech.use_case %></textarea>
+        </div>
+        <div class="input-field col s4">
+        <button class="btn waves-effect waves-light" type="submit" value="update" style="margin-bottom: 10px">Update Technology
+        <i class="material-icons right">add</i>
+        </button>
+      </div>
+      </div>
+    </form>
+  </div>
+</main>
+<script>
+  $(document).ready(function() {
+      $('select').material_select();
+    });
+</script>
+</body>
+
