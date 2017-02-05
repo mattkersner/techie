@@ -11,4 +11,5 @@ router.get('/', authHelpers.loginRequired, faveHelpers.findFaves, (req, res, nex
   });
 });
 
+
 module.exports = router;
