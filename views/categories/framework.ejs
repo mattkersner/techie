@@ -4,7 +4,11 @@
 <body>
 <main>
     <h1>Frameworks:</h1>
-    <p>Todo: pull in from technology db</p>
+    <ol>
+    <% techs.forEach(function(data) { %>
+      <li><%= data.name %></li>
+    <% }); %>
+    </ol>
 </main>
 <div>
   <a href="<%= '/categories' %>">Back to Categories</a>
