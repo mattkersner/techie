@@ -2,7 +2,7 @@
 <body>
 <main>
 <form action="<%= `/technologies/${tech.id}?_method=PUT` %>" method="POST">
-<div class="row">
+  <div class="row">
         <div class="input-field col s4">
           <label class="active">Name</label>
           <input type="text" name="name" value="<%= tech.name %>" />
@@ -17,7 +17,7 @@
             <option value="Module">Module</option>
           </select>
           <label>Category</label>
-  </div>
+        </div>
         <div class="input-field col s4">
           <label for="textarea1">Description</label><br/>
           <textarea id="textarea1" class="materialize-textarea" name="description"><%= tech.description %></textarea>
@@ -35,9 +35,11 @@
         <i class="material-icons right">add</i>
         </button>
       </div>
-      </div>
-    </form>
   </div>
+</form>
+<p><a href="<%= '/technologies' %>">Back to Technologies List</a></p>
+<p><a href="<%= '/categories' %>">Back to Categories</a></p>
+<p><a href="<%= '/' %>">Back to Home Page</a></p>
 </main>
 <script>
   $(document).ready(function() {
