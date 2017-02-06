@@ -76,4 +76,29 @@ router.delete('/user/:id', function(req, res, next) {
   });
 });
 
+router.delete('/:id/reviews/:rid', function(req, res) {
+  models.Reviews.destroy({
+    where: { id: req.params.rid }
+  }).then(function(review) {
+    res.redirect(`/technologies/${req.params.id}`);
+  });
+});
+
+router.get('/:id/reviews/:rid/edit', function(req, res) {
+  models.Reviews.findById(req.params.rid).then(function(review) {
+    console.log('review:' + review);
+  res.render('review/edit', { review: review });
+  })
+});
+
+router.put('/:id/reviews/:rid/edit', function(req, res, next) {
+  models.Reviews.update({
+    title: req.body.title,
+    review_text: req.body.review_text,
+  }, { where: {id: req.params.rid} }).then(() => {
+    res.redirect(`/technologies/${req.params.id}`);
+  });
+});
+
+
 module.exports = router;

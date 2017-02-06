@@ -7,8 +7,11 @@ const models = require('../db/models/index');
 //using params to pass the tech_id to the db
 router.get('/:id', function(req, res) {
   res.render('review/reviewform', {tech_id: req.params.id});
-})
+});
 
+router.get('/:id/edit', function(req, res) {
+  res.render('review/edit', {tech_id: req.params.id});
+});
 
 //post route to add review info to Reviews model
 router.post('/', function(req, res) {
@@ -23,7 +26,6 @@ router.post('/', function(req, res) {
     res.redirect(`/technologies/${req.body.techId}`)
   });
 });
-
 
 
 
