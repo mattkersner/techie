@@ -56,11 +56,11 @@
   <% reviews.forEach((review) => { %>
           <li>
             <% if (!user) { %>
-            <h1><a href="/auth/login"><%= review.username %>'s</a> Review:</h1>
+            <h3>Review by: <%= review.username %> - <a href="/auth/login">Login</a> to View Profile</h3>
             <% } %>
 
             <% if (user) { %>
-            <h1><a href="/user/<%= review.user_id %>"><%= review.username %></a></h1>
+            <h3>Review by: <%= review.username %> - <a href="/user/<%= review.user_id %>">View Profile</a></h3>
             <% } %>
 
             <p><%= review.title %> - <%= review.review_text %></p>
