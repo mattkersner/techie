@@ -28,20 +28,21 @@
 
 
 <% if (user !== undefined) { %>
-<a href="<%= `/technologies/${technology.id}/edit` %>">
-<button class="btn waves-effect waves-light" type="submit" name="action">Edit this Technology
-</button></a>
+  <a href="<%= `/technologies/${technology.id}/edit` %>">
+    <button type="submit" name="action">
+      Edit this Technology
+    </button>
+  </a>
   <form action="favorites" method="POST">
     <input style="display:none" value="<%= technology.id %>" name="tech_id">
-    <button class="btn waves-effect waves-light" type="submit" name="action">Fave
-      <i class="material-icons right">add</i>
+    <button type="submit" name="action">❤️
     </button>
   </form>
-  <button class="btn waves-effect waves-light">
-    <a style="color: white" href='../reviews/<%= technology.id %>'>Review Tech
-      <i class="material-icons right">add</i>
-    </a>
-  </button>
+  <a href='../reviews/<%= technology.id %>'>
+    <button>
+      Review This Tech
+    </button>
+  </a>
 <% } %>
 
 <% if (!user) { %>
