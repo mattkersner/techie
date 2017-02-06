@@ -86,8 +86,14 @@ router.delete('/:id/reviews/:rid', function(req, res) {
 
 router.get('/:id/reviews/:rid/edit', function(req, res) {
   models.Reviews.findById(req.params.rid).then(function(review) {
+<<<<<<< HEAD
   res.render('review/edit', { review: review });
   });
+=======
+    console.log('review:' + review);
+  res.render('review/edit', { review: review });
+  })
+>>>>>>> merging
 });
 
 router.put('/:id/reviews/:rid/edit', function(req, res, next) {
