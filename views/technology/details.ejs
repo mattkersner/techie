@@ -24,6 +24,7 @@
         </tr>
     </tbody>
   </table>
+
 <% if (user !== undefined) { %>
   <form action="favorites" method="POST">
     <input style="display:none" value="<%= technology.id %>" name="tech_id">
@@ -31,10 +32,23 @@
       <i class="material-icons right">add</i>
     </button>
   </form>
+  <button class="btn waves-effect waves-light">
+    <a style="color: white" href='../reviews/<%= technology.id %>'>Review Tech
+      <i class="material-icons right">add</i>
+    </a>
+  </button>
 <% } %>
+
 <a href="<%= '/technologies' %>">Back to Technologies List</a>
 <div>
-  <p>Todo: Review Section here</p>
+  <ul>
+  <% reviews.forEach((review) => { %>
+          <li>
+            <h1><%= review.username %></h1>
+            <p><%= review.title %> - <%= review.review_text %></p>
+          </li>
+          <% }) %>
+  </ul>
 </div>
 </main>
 

@@ -14,6 +14,8 @@ const technologies = require('./routes/technologies');
 const authRoutes = require('./routes/auth');
 const userRoutes = require('./routes/user');
 const categories = require('./routes/categories');
+const reviews = require('./routes/reviews');
+
 const app = express();
 
 //override with POST having ?_method
@@ -54,6 +56,7 @@ app.use('/technologies', technologies);
 app.use('/auth', authRoutes);
 app.use('/user', userRoutes);
 app.use('/categories', categories);
+app.use('/reviews', reviews);
 
 
 
