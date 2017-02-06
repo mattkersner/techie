@@ -22,11 +22,12 @@ router.delete('/:id', function(req, res, next) {
 });
 
 // individual user profiles
-router.get('/:id', function(req, res, next) {
+router.get('/:id', faveHelpers.profileFaves, function(req, res, next) {
   models.User.findById(req.params.id).then(function(profile) {
     res.render('user/profile', {
       profile: profile,
-      user: req.user.dataValues
+      user: req.user.dataValues,
+      faves: res.locals.faves
     });
   });
 });
