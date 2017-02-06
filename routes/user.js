@@ -11,4 +11,12 @@ router.get('/', authHelpers.loginRequired, faveHelpers.findFaves, (req, res, nex
   });
 });
 
+router.delete('/favorites/:id', function(req, res, next) {
+  models.Favorites.destroy({
+    where: { id: req.params.id }
+  }).then(function(fave) {
+    res.redirect('/user')
+  });
+});
+
 module.exports = router;
