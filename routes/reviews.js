@@ -10,7 +10,7 @@ router.get('/:id', function(req, res) {
 })
 
 
-//post route to add review form info to Reviews model
+//post route to add review info to Reviews model
 router.post('/', function(req, res) {
   console.log(req.body);
   models.Reviews.create({
