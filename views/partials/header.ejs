@@ -1,0 +1,29 @@
+<header>
+  <% if (!user) { %>
+    <nav class="uk-navbar-container" uk-navbar>
+    <div class="uk-navbar-left">
+    <a class="uk-navbar-item uk-logo" href="/">Tech.ie</a>
+    <div class="uk-navbar-right">
+        <ul class="uk-navbar-nav">
+            <li><a href="auth/register">Register</a></li>
+        <li><a href="auth/login">Login</a></li>
+            <li><a href=""></a></li>
+        </ul>
+    </div>
+    </div>
+   </nav>
+      <% } else { %>
+        <nav class="uk-navbar-container" uk-navbar>
+    <div class="uk-navbar-left">
+    <a class="uk-navbar-item uk-logo" href="/">Tech.ie</a>
+    <div class="uk-navbar-right">
+        <ul class="uk-navbar-nav">
+            <li><a href="/user">Dashboard</a></li>
+        <li><a href="auth/logout">Logout</a></li>
+            <li><a href=""></a></li>
+        </ul>
+    </div>
+    </div>
+   </nav>
+      <% } %>
+</header>

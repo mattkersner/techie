@@ -2,10 +2,10 @@
 <html>
   <% include partials/head.ejs %>
   <body>
+  <% include partials/header.ejs %>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
     <div>
-
     <% if (!user) { %>
       <ul>
         <li><a href="auth/register">Register</a></li>

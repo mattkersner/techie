@@ -4,7 +4,9 @@ const authHelpers = require('../auth/auth-helpers');
 const passport = require('../auth/local');
 
 router.get('/register', authHelpers.loginRedirect, (req, res) => {
-  res.render('auth/register');
+  res.render('auth/register', {
+    user: req.user
+  });
 });
 
 router.post('/register', (req, res, next) => {
@@ -20,7 +22,9 @@ router.post('/register', (req, res, next) => {
 });
 
 router.get('/login', authHelpers.loginRedirect, (req, res) => {
-  res.render('auth/login');
+  res.render('auth/login', {
+    user: req.user
+  });
 });
 
 router.post('/login', passport.authenticate('local', {
