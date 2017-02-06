@@ -25,18 +25,22 @@
     </tbody>
   </table>
 
-<% if (user) { %>
-  <!-- button to favorite -->
+
+<% if (user !== undefined) { %>
+<a href="<%= `/technologies/${technology.id}/edit` %>">
+<button class="btn waves-effect waves-light" type="submit" name="action">Edit this Technology
+</button></a>
   <form action="favorites" method="POST">
     <input style="display:none" value="<%= technology.id %>" name="tech_id">
     <button class="btn waves-effect waves-light" type="submit" name="action">Fave
       <i class="material-icons right">add</i>
     </button>
   </form>
-  <!-- button to edit tech details -->
-  <a href="<%= `/technologies/${technology.id}/edit` %>">
-<button class="btn waves-effect waves-light" type="submit" name="action">Edit this Technology
-</button></a>
+  <button class="btn waves-effect waves-light">
+    <a style="color: white" href='../reviews/<%= technology.id %>'>Review Tech
+      <i class="material-icons right">add</i>
+    </a>
+  </button>
 <% } %>
 
 <% if (!user) { %>
@@ -46,8 +50,16 @@
 <p><a href="<%= '/technologies' %>">Back to Technologies List</a></p>
 <p><a href="<%= '/categories' %>">Back to Categories</a></p>
 <p><a href="<%= '/' %>">Back to Home Page</a></p>
+
 <div>
-  <p>Todo: Review Section here</p>
+  <ul>
+  <% reviews.forEach((review) => { %>
+          <li>
+            <h1><%= review.username %></h1>
+            <p><%= review.title %> - <%= review.review_text %></p>
+          </li>
+          <% }) %>
+  </ul>
 </div>
 </main>
 

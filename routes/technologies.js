@@ -1,6 +1,7 @@
-var express = require('express');
-var router = express.Router();
-var models = require('../db/models/index');
+const express = require('express');
+const router = express.Router();
+const models = require('../db/models/index');
+const reviews = require('../reviews/reviews');
 
 router.get('/', function(req, res, next) {
   models.Technology.findAll({}).then(function(technology) {
@@ -28,11 +29,12 @@ router.post('/',function(req, res, next) {
   });
 });
 
-router.get('/:id', function(req, res, next) {
+router.get('/:id', reviews.getReviews, function(req, res, next) {
   models.Technology.findById(req.params.id).then(function(technology) {
     res.render('technology/details', {
       technology: technology,
-      user: req.user // passes in req user id
+      user: req.user,
+      reviews: res.locals.reviews
       });
   });
 });
@@ -63,6 +65,14 @@ router.post('/favorites', function(req, res, next) {
     tech_id: req.body.tech_id // pulling from views
   }).then(function() {
     res.redirect('/user');
+  });
+});
+
+router.delete('/user/:id', function(req, res, next) {
+  models.Favorites.destroy({
+    where: { id: req.params.id }
+  }).then(function(fave) {
+    res.redirect('/user')
   });
 });
 
