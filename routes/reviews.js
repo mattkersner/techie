@@ -6,11 +6,11 @@ const models = require('../db/models/index');
 //get route to render the review form
 //using params to pass the tech_id to the db
 router.get('/:id', function(req, res) {
-  res.render('review/reviewform', {tech_id: req.params.id});
+  res.render('review/reviewform', {tech_id: req.params.id, user: req.user });
 });
 
 router.get('/:id/edit', function(req, res) {
-  res.render('review/edit', {tech_id: req.params.id});
+  res.render('review/edit', {tech_id: req.params.id, user: req.user });
 });
 
 //post route to add review info to Reviews model

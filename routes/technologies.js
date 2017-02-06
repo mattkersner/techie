@@ -6,14 +6,15 @@ const reviews = require('../reviews/reviews');
 router.get('/', function(req, res, next) {
   models.Technology.findAll({}).then(function(technology) {
     res.render('technology/list', {
-      technology: technology
+      technology: technology,
+      user: req.user
     });
   });
 });
 
 router.get('/new', function(req, res, next) {
   res.render('technology/new', {
-
+  user: req.user
   });
 });
 
@@ -42,7 +43,7 @@ router.get('/:id', reviews.getReviews, function(req, res, next) {
 //render edit tech form
 router.get('/:id/edit', function(req, res, next) {
   models.Technology.findById(req.params.id).then(function(tech) {
-    res.render('technology/edit', { tech: tech });
+    res.render('technology/edit', { tech: tech, user: req.user });
   });
 });
 
@@ -86,7 +87,7 @@ router.delete('/:id/reviews/:rid', function(req, res) {
 
 router.get('/:id/reviews/:rid/edit', function(req, res) {
   models.Reviews.findById(req.params.rid).then(function(review) {
-  res.render('review/edit', { review: review });
+  res.render('review/edit', { review: review, user: req.user });
   });
 });
 
