@@ -1,0 +1,18 @@
+<% include ../partials/head.ejs %>
+<body>
+  <form action="<%= `/technologies/${review.tech_id}/reviews/${review.id}/edit?_method=PUT` %>" method="post">
+      <div class="input-field">
+        <label class="active">Title:</label>
+        <input type="text" name="title" />
+      </div>
+      <div class="input-field">
+        <label for="textarea1">Review:</label><br/>
+        <textarea id="textarea1" class="materialize-textarea" name="review_text">
+        </textarea>
+      </div>
+      <div>
+        <button type="submit" name="action">Submit</button>
+      </div>
+  </form>
+</body>
+</html>
