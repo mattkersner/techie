@@ -39,6 +39,26 @@ router.get('/:id', reviews.getReviews, function(req, res, next) {
   });
 });
 
+//render edit tech form
+router.get('/:id/edit', function(req, res, next) {
+  models.Technology.findById(req.params.id).then(function(tech) {
+    res.render('technology/edit', { tech: tech });
+  });
+});
+
+//put request to send tech edits to upodate tech table
+router.put('/:id', function(req, res, next) {
+  models.Technology.update({
+    name: req.body.name,
+    description: req.body.description,
+    documentation: req.body.documentation,
+    use_case: req.body.use_case,
+    category_name: req.body.category_name
+  }, { where: { id: req.params.id} }).then(() => {
+    res.redirect(`/technologies/${req.params.id}`);
+  });
+});
+
 router.post('/favorites', function(req, res, next) {
   models.Favorites.create({
     user_id: req.user.id, // properly passing user id

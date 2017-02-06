@@ -5,16 +5,19 @@
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
     <div>
-      <p>Not logged in:</p>
+
+    <% if (!user) { %>
       <ul>
         <li><a href="auth/register">Register</a></li>
         <li><a href="auth/login">Login</a></li>
       </ul>
-    <p>Logged in:</p>
+
+      <% } else { %>
       <ul>
         <li><a href="/user">User Page/Dashboard</a></li>
         <li><a href="/auth/logout">Logout</a></li>
       </ul>
+      <% } %>
     </div>
     <div>
       <a href="categories">Categories Index - All</a>
@@ -29,8 +32,8 @@
     <div>
       <a href="technologies">Technologies Index - All</a>
     </div>
-
+    <% if (user) { %>
     <button ><a href="/technologies/new">Add New Technology<i class="material-icons right">add</i></a></button>
-
+    <% } %>
   </body>
 </html>
