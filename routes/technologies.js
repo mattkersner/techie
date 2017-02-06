@@ -48,4 +48,12 @@ router.post('/favorites', function(req, res, next) {
   });
 });
 
+router.delete('/user/:id', function(req, res, next) {
+  models.Favorites.destroy({
+    where: { id: req.params.id }
+  }).then(function(fave) {
+    res.redirect('/user')
+  });
+});
+
 module.exports = router;
