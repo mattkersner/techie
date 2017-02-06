@@ -12,11 +12,21 @@ router.get('/', authHelpers.loginRequired, faveHelpers.findFaves, (req, res, nex
   });
 });
 
+// user deletes favorites from their dashboard
 router.delete('/:id', function(req, res, next) {
   models.Favorites.destroy({
     where: { id: req.params.id }
   }).then(function(fave) {
     res.redirect('/user')
+  });
+});
+
+// individual user profiles
+router.get('/:id', function(req, res, next) {
+  models.User.findById(req.params.id).then(function(profile) {
+    res.render('user/profile', {
+      profile: profile
+    });
   });
 });
 
