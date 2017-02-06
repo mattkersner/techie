@@ -17,7 +17,7 @@
         <h3>Favorite Technologies:</h3>
         <ul>
           <% faves.forEach((fave) => { %>
-          <form action=<%= `/user/${fave.id}?_method=DELETE` %>>
+          <form action="<%= `/user/${fave.fave_id}?_method=DELETE` %>" method="POST">
             <a href="/technologies/<%= fave.id %>">
             <%= fave.name %> - <%= fave.category_name %>
             </a>
@@ -28,6 +28,7 @@
         </p>
       </li>
     </ul>
+    <a href="/">Go Back to Home Page</a>
   </main>
 </body>
 </html>

@@ -1,0 +1,18 @@
+<% include ../partials/head.ejs %>
+<body>
+  <form action="/reviews" method="post">
+      <div class="input-field">
+        <label class="active">Title:</label>
+        <input type="text" name="title" />
+      </div>
+      <div class="input-field">
+        <label for="textarea1">Review:</label><br/>
+        <textarea id="textarea1" class="materialize-textarea" name="review_text"></textarea>
+      </div>
+      <div>
+        <input style="display: none" type="text" value="<%= tech_id %>" name="techId">
+        <button type="submit" name="action">Submit</button>
+      </div>
+  </form>
+</body>
+</html>
