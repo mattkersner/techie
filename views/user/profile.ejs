@@ -1,13 +1,9 @@
 <% include ../partials/head.ejs %>
+<% include ../partials/nav.ejs %>
 <body>
-<div>
-<ul>Temp Navbar:
-  <li><a href="/">Back to Home</a></li>
-  <li><a href="/auth/logout">Logout</a></li>
-</ul>
-</div>
   <main>
-  <p>Hello, world</p>
+  <p>Hello, world! My name is <%= profile.username %></p>
+  <p>Welcome to my profile, <%= user.username %></p>
   </main>
 </body>
 </html>
