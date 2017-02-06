@@ -139,15 +139,6 @@ module.exports = {
         category_name: 'Modules_and_Components'
       },
       {
-        name: 'body-parser',
-        description: 'Parse incoming request bodies in a middleware before your handlers, available under the req.body property.',
-        documentation: 'https://github.com/expressjs/body-parser',
-        use_case: 'https://shrouded-island-56694.herokuapp.com/',
-        createdAt: '2017-02-03',
-        updatedAt: '2017-02-03',
-        category_name: 'Modules_and_Components'
-      },
-      {
         name: 'jquery-scrollify',
         description: 'A jQuery plugin that assists scrolling and smoothly snaps to sections.',
         documentation: 'https://www.npmjs.com/package/jquery-scrollify',
