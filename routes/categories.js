@@ -87,7 +87,7 @@ router.get('/APIs', function(req, res, next) {
 
 router.get('/Collaboration_Tools', function(req, res, next) {
   models.Technology.findAll({
-    where: { category_name: 'Collaboration%20Tools' }
+    where: { category_name: 'Collaboration_Tools' }
   }).then((data) => {
     res.render('categories/collaboration', {
       techs: data
