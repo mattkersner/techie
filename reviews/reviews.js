@@ -2,9 +2,10 @@
 const models = require('../db/models/index');
 
 function getReviews(req, res, next) {
-  models.sequelize.query('SELECT "Reviews"."review_text", "Users"."username" FROM "Reviews" JOIN "Technologies" ON "Reviews"."tech_id" = "Technologies"."id" JOIN "Users" ON "Reviews"."user_id" = "Users"."id"  WHERE "Users"."id" = :id', {
+  console.log(req);
+  models.sequelize.query('SELECT "Reviews"."title", "Reviews"."review_text", "Users"."username" FROM "Reviews" JOIN "Users" ON "Reviews"."user_id" = "Users"."id" JOIN "Technologies" ON "Reviews"."tech_id" = "Technologies"."id" WHERE "Technologies"."id" = :id', {
     // replaces :id in the query
-    replacements: { id: req.user.id },
+    replacements: { id: req.params.id },
     // don't need metadata in the response
     type: models.sequelize.QueryTypes.SELECT
   }).then((reviews) => {
