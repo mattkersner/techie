@@ -1,18 +1,17 @@
 <% include ../partials/head.ejs %>
-
 <body>
 <% include ../partials/headercat.ejs %>
 <main>
 <h1 class="center">Add New Technology</h1>
-<div class="row">
+<div class="container">
     <form action="/technologies" method="POST" class="col s12">
       <div class="row">
-        <div class="input-field col s4">
+        <div class="input-field col s6">
           <label class="active">Name</label>
           <input type="text" name="name" />
         </div>
-        <div class="input-field col s12">
-          <select name="category_name">
+        <div class="input-field col s6">
+          <select id="category" name="category_name">
             <option value="" disabled selected>Choose a category</option>
             <option value="Languages">Language</option>
             <option value="Libraries">Library</option>
@@ -25,19 +24,19 @@
             <option value="Text_Editors">Text Editor</option>
             <option value="Productivity">Productivity</option>
           </select>
-          <label>Category</label>
-  </div>
-        <div class="input-field col s4">
+          <label for="category">Category</label>
+        </div>
+        <div class="input-field col s12">
           <label for="textarea1">Description</label><br/>
           <textarea id="textarea1" class="materialize-textarea" name="description"></textarea>
         </div>
         <div class="input-field col s4">
-          <label for="textarea1">Link to Official Documentation</label><br/>
-          <textarea id="textarea1" class="materialize-textarea" name="documentation"></textarea>
+          <label for="documentation">Link to Official Documentation</label><br/>
+          <input class="materialize-textarea" type="text" name="documentation"></textarea>
         </div>
         <div class="input-field col s4">
-          <label for="textarea1">Use-Case of Technology</label><br/>
-          <textarea id="textarea1" class="materialize-textarea" name="use_case"></textarea>
+          <label for="use_case">Use-Case of Technology</label><br/>
+          <input type="text" class="materialize-textarea" name="use_case"></textarea>
         </div>
         <div class="input-field col s4">
         <button class="btn waves-effect waves-light" type="submit" name="action" style="margin-bottom: 10px">Add Technology
@@ -46,8 +45,9 @@
       </div>
       </div>
     </form>
-  </div>
+    </div>
 </main>
+<% include ../partials/jsdefaults.ejs %>
 <script>
   $(document).ready(function() {
       $('select').material_select();
