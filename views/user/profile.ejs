@@ -15,7 +15,7 @@
     <ul>
       <% faves.forEach((fave) => { %>
         <li><a href="/technologies/<%= fave.id %>">
-          <%= fave.name %> - <%= fave.category_name %>
+          <%= fave.name %> - <%= fave.category_name.replace(/_/g, ' ') %>
         </a>
         </li>
       <% }) %>

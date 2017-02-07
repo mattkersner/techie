@@ -14,7 +14,7 @@
       <% faves.forEach((fave) => { %>
       <form action="<%= `/user/${fave.fave_id}?_method=DELETE` %>" method="POST">
         <a href="/technologies/<%= fave.id %>">
-        <%= fave.name %> - <%= fave.category_name %>
+        <%= fave.name %> - <%= fave.category_name.replace(/_/g, ' ') %>
         </a>
         <button type="submit">X</button>
       </form>
