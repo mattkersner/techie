@@ -2,25 +2,42 @@
 <body>
 <% include ../partials/headercat.ejs %>
   <main>
-  <p>Hello, world! My name is <b><%= profile.username %></b></p>
-  <p>Welcome to my profile, <b><%= user.username %></b></p>
-  <p>About me:</p>
-  <p>
-      My Name: <%= profile.firstName %> <%= profile.lastName %><br />
-      Contact me at: <%= profile.email %> <br />
-      My Github: <%= profile.github %> <br />
-      Toolbelt: <%= profile.skills %><br />
-    </p>
-    <p>Favorite Technologies:</p>
-    <ul>
-      <% faves.forEach((fave) => { %>
-        <li><a href="/technologies/<%= fave.id %>">
-          <%= fave.name %> - <%= fave.category_name.replace(/_/g, ' ') %>
-        </a>
-        </li>
-      <% }) %>
-    </ul>
+  <div class="dashboard">
+  <h1><%= user.username %></h1>
+
+  <div class="card">
+    <div class="card-content">
+      <p>Hello, my name is <%= profile.firstName %> <%= profile.lastName %>! This is my description section, which will be added to the register form :)</p>
+    </div>
+    <div class="card-tabs">
+      <ul class="tabs tabs-fixed-width">
+        <li class="tab"><a href="#test4">Toolbelt</a></li>
+        <li class="tab"><a class="active" href="#test5">Github</a></li>
+        <li class="tab"><a href="#test6">Email</a></li>
+      </ul>
+    </div>
+    <div class="card-content grey lighten-4">
+      <div id="test4"><%= profile.skills %></div>
+      <div id="test5"><%= profile.github %></div>
+      <div id="test6"><%= profile.email %></div>
+    </div>
+  </div>
+
+  <p>Favorite Technologies:</p>
+  <div class="collection favorites">
+    <% faves.forEach((fave) => { %>
+
+      <a href="/technologies/<%= fave.id %>" class="collection-item">
+        <%= fave.name %> - <%= fave.category_name.replace(/_/g, ' ') %>
+      </a>
+
+    <% }) %>
+  </div>
+  </div>
   </main>
   <% include ../partials/jsdefaults.ejs %>
 </body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
 </html>

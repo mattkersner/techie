@@ -66,8 +66,21 @@ div.center-promo {
   text-align: center;
   margin-top: 20px; }
 
+<<<<<<< HEAD
 .secondary-content {
   color: black; }
+=======
+.dashboard {
+  text-align: center; }
+
+.favorites {
+  margin: 0 auto;
+  width: 30%; }
+
+.card {
+  margin: 0 auto;
+  width: 50%; }
+>>>>>>> wtb design lessons pst
 
 /* label color */
 .input-field label {
