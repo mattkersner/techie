@@ -64,7 +64,7 @@ router.put('/:id', function(req, res, next) {
 router.post('/favorites', faveHelpers.findFaves, function(req, res, next) {
   //map through faves obj to extract id's, save result in idArr variable.
     const idArr = res.locals.faves.map(data => data.id);
-    //check whether tech_id is = to an id already in user's favorites
+    //check whether tech_id is not = to an id already in user's favorites
     if (!idArr.includes(parseInt(req.body.tech_id)))  {
     models.Favorites.create({
     user_id: req.user.id, // properly passing user id
