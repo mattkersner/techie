@@ -14,7 +14,7 @@ router.get('/', function(req, res, next) {
 
 router.get('/new', function(req, res, next) {
   res.render('technology/new', {
-
+    user: req.user
   });
 });
 
