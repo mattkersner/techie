@@ -259,6 +259,10 @@ div.center-promo {
 .icon-row {
   display: flex;
 }
+
+.dashboard {
+  text-align: center;
+}
 .modules-label {
   font-size: 14px;
   color: black;
@@ -266,16 +270,8 @@ div.center-promo {
 
 .favorites {
   margin: 10px auto;
-  width: 30%;
 }
 
-.card {
-  margin: 0 auto;
-  width: 50%;
-  .card-content p {
-    text-align: left;
-  }
-  .tab {
-    text-align: center;
-  }
+.card-content p {
+  text-align: left;
 }
