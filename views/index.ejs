@@ -3,21 +3,9 @@
   <% include partials/head.ejs %>
   <body>
   <% include partials/header.ejs %>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <div>
-    <% if (!user) { %>
-      <ul>
-        <li><a href="auth/register">Register</a></li>
-        <li><a href="auth/login">Login</a></li>
-      </ul>
-
-      <% } else { %>
-      <ul>
-        <li><a href="/user">User Page/Dashboard</a></li>
-        <li><a href="/auth/logout">Logout</a></li>
-      </ul>
-      <% } %>
+    <h1 class="center"><%= title %></h1>
+    <div class="parallax-container">
+      <div class="parallax"><img src="images/background.jpg"></div>
     </div>
     <div>
       <a href="categories">Categories Index - All</a>
@@ -40,5 +28,6 @@
     <% if (user) { %>
     <button ><a href="/technologies/new">Add New Technology<i class="material-icons right">add</i></a></button>
     <% } %>
+    <% include partials/jsdefaults.ejs %>
   </body>
 </html>
