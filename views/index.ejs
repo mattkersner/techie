@@ -48,22 +48,69 @@
       <div class="parallax"><img src="images/background.jpg"></div>
     </div>
     <div>
-      <a href="categories">Categories Index - All</a>
-      <ul>
-        <li><a href="categories/Languages">Language Icon</a></li>
-        <li><a href="categories/Libraries">Library Icon</a></li>
-        <li><a href="categories/Frameworks">Framework Icon</a></li>
-        <li><a href="categories/Styling">Styling Icon</a></li>
-        <li><a href="categories/Modules_and_Components">Module Icon</a></li>
-        <li><a href="categories/Plugins">Plugin Icon</a></li>
-        <li><a href="categories/APIs">API Icon</a></li>
-        <li><a href="categories/Collaboration_Tools">Collaberation Tools Icon</a></li>
-        <li><a href="categories/Text_Editors">Text Editor Icon</a></li>
-        <li><a href="categories/Productivity">Productivity Icon</a></li>
-      </ul>
-    </div>
+      <div class="container icons-container col s10">
+        <a href="categories/Languages">
+          <div class="icons hoverable col s2" >
+            <img  class="language-icon icon" src="images/icons/languageicon.png" />
+              <p class="category-labels">Languages</p>
+          </div>
+        </a>
+        <a href="categories/Libraries">
+          <div class="icons hoverable col s2">
+            <img class="library-icon icon" src="images/icons/libraryicon.jpg" />
+              <p class="category-labels">Libraries</p>
+          </div>
+        </a>
+        <a href="categories/Frameworks">
+          <div class="icons hoverable">
+            <img class="framework-icon icon" src="images/icons/frameworkicon.png" />
+              <p class="category-labels">Frameworks</p>
+          </div>
+        </a>
+        <a href="categories/Styling">
+          <div class="icons hoverable">
+            <img class="styling-icon icon" src="images/icons/stylingicon.jpg" />
+              <p class="category-labels">Styling</p>
+          </div>
+        </a>
+        <a href="categories/Modules_and_Components">
+          <div class="icons hoverable col s2">
+            <img class="module-icon icon" src="images/icons/moduleicon.png" />
+              <p class="modules-label category-label">Modules and Components</p>
+          </div>
+        <a href="categories/Plugins">
+          <div class="icons hoverable">
+            <img class="plugin-icon icon" src="images/icons/pluginicon.jpg" />
+              <p class="category-labels">Plugins</p>
+          </div>
+        </a>
+        <a href="categories/APIs">
+          <div class="icons hoverable">
+            <img class="api-icon icon" src="images/icons/apiicon.jpg" />
+              <p class="category-labels">APIs</p>
+          </div>
+        </a>
+        <a href="categories/Collaboration_Tools">
+          <div class="icons hoverable">
+            <img class="collaboration-icon icon" src="images/icons/collaborationicon.png" />
+              <p class="category-labels">Collaboration Tools</p>
+          </div>
+        </a>
+        <a href="categories/Text_Editors">
+          <div class="icons hoverable">
+            <img class="editor-icon icon" src="images/icons/texteditoricon.jpg" />
+              <p class="category-labels">Text Editors</p>
+          </div>
+        </a>
+        <a href="categories/Productivity">
+          <div class="icons hoverable">
+            <img class="productivity-icon icon" src="images/icons/productivityicon.png" />
+              <p class="category-labels">Productivity</p>
+          </div>
+        </ col s10a>
+      </div>
+      </div>
     <div>
-      <a href="technologies">Technologies Index - All</a>
     </div>
     <% if (user) { %>
     <button ><a href="/technologies/new">Add New Technology<i class="material-icons right">add</i></a></button>
