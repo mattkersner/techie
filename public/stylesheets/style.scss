@@ -42,14 +42,17 @@ button {
   justify-content: space-around;
 }
 
-.card {
-  background-color: #364F6B;
-}
-
 .card-content a {
   color: white;
   &:hover {
-    color: cyan;
+    color: orange;
+  }
+}
+
+h1 a {
+  color: black;
+  &:hover {
+    color: orange;
   }
 }
 

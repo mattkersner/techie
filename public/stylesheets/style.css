@@ -30,13 +30,15 @@ button {
   flex-direction: row;
   justify-content: space-around; }
 
-.card {
-  background-color: #364F6B; }
-
 .card-content a {
   color: white; }
   .card-content a:hover {
-    color: cyan; }
+    color: orange; }
+
+h1 a {
+  color: black; }
+  h1 a:hover {
+    color: orange; }
 
 span.card-title.center {
   font-size: 3rem;
