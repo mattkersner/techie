@@ -29,15 +29,15 @@
 
 <% if (user !== undefined) { %>
 <a href="<%= `/technologies/${technology.id}/edit` %>">
-<button class="btn waves-effect waves-light" type="submit" name="action">Edit this Technology
+<button class="uk-button-primary uk-button-small" type="submit" name="action">Edit this Technology
 </button></a>
   <form action="favorites" method="POST">
     <input style="display:none" value="<%= technology.id %>" name="tech_id">
-    <button class="btn waves-effect waves-light" type="submit" name="action">Fave
+    <button class="uk-button-primary uk-button-small" type="submit" name="action">Fave
       <i class="material-icons right">add</i>
     </button>
   </form>
-  <button class="btn waves-effect waves-light">
+  <button class="uk-button-primary uk-button-small">
     <a style="color: white" href='../reviews/<%= technology.id %>'>Review Tech
       <i class="material-icons right">add</i>
     </a>
@@ -68,10 +68,10 @@
             <% if (user !== undefined) { %>
               <% if (user.username === review.username) { %>
             <form action="<%= `/technologies/${review.tech_id}/reviews/${review.id}?_method=DELETE` %>" method="POST">
-            <button type="submit">Delete</button>
+            <button class="uk-button-primary uk-button-small" type="submit">Delete</button>
             </form>
             <a href="<%= `/technologies/${review.tech_id}/reviews/${review.id}/edit` %>">
-            <button class="btn waves-effect waves-light" type="submit" name="action">Edit Review
+            <button class="uk-button-primary uk-button-small" type="submit" name="action">Edit Review
             </button></a>
             <% } %>
             <% } %>

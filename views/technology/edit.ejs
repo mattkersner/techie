@@ -2,13 +2,14 @@
 <body>
 <% include ../partials/headercat.ejs %>
 <main>
+<div class="container" style="margin-top: 40px">
 <form action="<%= `/technologies/${tech.id}?_method=PUT` %>" method="POST">
   <div class="row">
-        <div class="input-field col s4">
+        <div class="input-field col s6">
           <label class="active">Name</label>
           <input type="text" name="name" value="<%= tech.name %>" />
         </div>
-        <div class="input-field col s12">
+        <div class="input-field col s6">
           <select name="category_name">
             <option disabled selected>Choose a category</option>
             <option value="Languages">Language</option>
@@ -24,17 +25,17 @@
           </select>
           <label>Category</label>
         </div>
-        <div class="input-field col s4">
+        <div class="input-field col s12">
           <label for="textarea1">Description</label><br/>
           <textarea id="textarea1" class="materialize-textarea" name="description"><%= tech.description %></textarea>
         </div>
         <div class="input-field col s4">
-          <label for="textarea1">Link to Official Documentation</label><br/>
-          <textarea id="textarea1" class="materialize-textarea" name="documentation"><%= tech.documentation %></textarea>
+          <input type="text" class="materialize-textarea" name="documentation" value="<%= tech.documentation %>">
+          <label for="documentation" class="active">Link to Official Documentation</label>
         </div>
         <div class="input-field col s4">
-          <label for="textarea1">Use-Case of Technology</label><br/>
-          <textarea id="textarea1" class="materialize-textarea" name="use_case"><%= tech.use_case %></textarea>
+          <input type="text" class="materialize-textarea" name="use_case" value="<%= tech.use_case %>">
+          <label for="use_case" class="active">Use-Case of Technology</label>
         </div>
         <div class="input-field col s4">
         <button class="btn waves-effect waves-light" type="submit" value="update" style="margin-bottom: 10px">Update Technology
@@ -43,10 +44,12 @@
       </div>
   </div>
 </form>
+</div>
 <p><a href="<%= '/technologies' %>">Back to Technologies List</a></p>
 <p><a href="<%= '/categories' %>">Back to Categories</a></p>
 <p><a href="<%= '/' %>">Back to Home Page</a></p>
 </main>
+<% include ../partials/jsdefaults.ejs %>
 <script>
   $(document).ready(function() {
       $('select').material_select();
