@@ -164,4 +164,38 @@ div.center-promo {
   position: relative;
   top: 1px; }
 
+.icons-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 30px; }
+
+.category-labels {
+  color: black; }
+
+.icon {
+  height: 100px;
+  width: 100px; }
+
+.library-icon {
+  height: 125px;
+  width: 125px;
+  margin-bottom: -10px; }
+
+.icons {
+  height: 180px;
+  width: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 10px; }
+
+.icon-row {
+  display: flex; }
+
+.modules-label {
+  font-size: 14px;
+  color: black; }
+
 /*# sourceMappingURL=style.css.map */
