@@ -1,6 +1,6 @@
 #Tech.ie
 
-![Tech.ie homepage](techie/public/images/homepage.png)
+![Tech.ie homepage](/techie/public/images/homepage.png)
 
 ##Description
 
@@ -8,7 +8,7 @@ Our goal was to create a central place for fellow techies to rate and review the
 
 Users can click on a category icon from the home page to see all technologies in that category. They can view, review or add a new technology. they can also add a technology to their personal list of favorite technologies. 
 
-![Category icons](techie/public/images/caticons.png)
+![Category icons](/techie/public/images/caticons.png)
 
 ##Technologies Used
 
