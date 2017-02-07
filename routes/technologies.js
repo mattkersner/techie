@@ -43,7 +43,10 @@ router.get('/:id', reviews.getReviews, function(req, res, next) {
 //render edit tech form
 router.get('/:id/edit', function(req, res, next) {
   models.Technology.findById(req.params.id).then(function(tech) {
-    res.render('technology/edit', { tech: tech });
+    res.render('technology/edit', {
+      tech: tech,
+      user: req.user
+    });
   });
 });
 
@@ -68,12 +71,14 @@ router.post('/favorites', faveHelpers.findFaves, function(req, res, next) {
     if (!idArr.includes(parseInt(req.body.tech_id)))  {
     models.Favorites.create({
     user_id: req.user.id, // properly passing user id
-    tech_id: req.body.tech_id // pulling from views
+    tech_id: req.body.tech_id, // pulling from views
   }).then(function() {
     res.redirect('/user');
    })
   } else {
-    res.render('technology/error');
+    res.render('technology/error', {
+      user: req.user
+    });
     }
  });
 
