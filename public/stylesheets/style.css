@@ -40,6 +40,7 @@ a.btn {
   .card-content a:hover {
     color: #3BAEA0; }
 
+<<<<<<< HEAD
 h1 a {
   color: black; }
   h1 a:hover {
@@ -47,6 +48,16 @@ h1 a {
 
 i.large {
   color: #3BAEA0; }
+=======
+.tabs .tab a {
+  color: white; }
+
+.tabs .tab a:hover, .tabs .tab a.active {
+  color: #3BAEA0; }
+
+.tabs .indicator {
+  background-color: #3BAEA0; }
+>>>>>>> Styled individual profiles as well as listing logged in users reviews on their dashboard
 
 span.card-title.center {
   font-size: 3rem;
@@ -67,16 +78,22 @@ div.center-promo {
   margin-top: 20px; }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .secondary-content {
   color: black; }
 =======
+=======
+.secondary-content {
+  color: black; }
+
+>>>>>>> Styled individual profiles as well as listing logged in users reviews on their dashboard
 .dashboard {
   text-align: center; }
 
 .favorites {
-  margin: 10px auto;
-  width: 30%; }
+  margin: 10px auto; }
 
+<<<<<<< HEAD
 .card {
   margin: 0 auto;
   width: 50%; }
@@ -88,6 +105,12 @@ div.center-promo {
   .card .tab {
     text-align: center; }
 >>>>>>> Altering user table and register form
+=======
+.card-content {
+  color: white; }
+  .card-content p {
+    text-align: left; }
+>>>>>>> Styled individual profiles as well as listing logged in users reviews on their dashboard
 
 /* label color */
 .input-field label {

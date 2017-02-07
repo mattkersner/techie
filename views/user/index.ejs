@@ -6,21 +6,56 @@
     <p>
       Name: <%= user.firstName %> <%= user.lastName %><br />
       Email: <%= user.email %> <br />
-      Github: <%= user.github %> <br />
+      Profile: <%= user.profile %> <br />
       Skills: <%= user.skills %><br />
     </p>
-    <h3>Favorite Technologies:</h3>
-    <ul>
-      <% faves.forEach((fave) => { %>
-      <form action="<%= `/user/${fave.fave_id}?_method=DELETE` %>" method="POST">
-        <a href="/technologies/<%= fave.id %>">
-        <%= fave.name %> - <%= fave.category_name.replace(/_/g, ' ') %>
-        </a>
-        <button type="submit">X</button>
-      </form>
+<!-- Users Favorites -->
+  <h3>Favorites Manager:</h3>
+  <ul>
+    <% faves.forEach((fave) => { %>
+    <form action="<%= `/user/${fave.fave_id}?_method=DELETE` %>" method="POST">
+      <a href="/technologies/<%= fave.id %>">
+      <%= fave.name %> - <%= fave.category_name.replace(/_/g, ' ') %>
+      </a>
+      <button type="submit">X</button>
+    </form>
+    <% }) %>
+  </ul>
+<!-- Users Reviews -->
+  <div class="container">
+  <h1 class="center">Reviews</h1>
+    <ul class="collection">
+      <% reviews.forEach((review) => { %>
+      <li class="collection-item avatar">
+        <i class="material-icons circle cyan">account_circle</i>
+        <% if (!user) { %>
+          <span class="title"><a href="/auth/login"> <%= review.username %> </a></span>
+        <% } %>
+        <% if (user) { %>
+          <span class="title"><a href="/technologies/<%= review.tech_id %>"> <%= review.tech_name %></a></span>
+        <% } %>
+        <p><%= review.title %><br>
+        <%= review.review_text %></p>
+        <hr>
+          <% if (user.username === review.username) { %>
+            <div class="flexButtons2">
+            <a href="<%= `/technologies/${review.tech_id}/reviews/${review.id}/edit` %>">
+            <button class="myButton" type="submit" name="action" style="top: 5px">Edit
+            </button></a>
+            <form style="top: 45px" action="<%= `/technologies/${review.tech_id}/reviews/${review.id}?_method=DELETE` %>" method="POST">
+            <button class="myButton" type="submit">Delete</button>
+            </form>
+            </div>
+          <% } %>
+      </li>
       <% }) %>
     </ul>
+<<<<<<< HEAD
   </main>
   <% include ../partials/jsdefaults.ejs %>
+=======
+  </div>
+</main>
+>>>>>>> Styled individual profiles as well as listing logged in users reviews on their dashboard
 </body>
 </html>
