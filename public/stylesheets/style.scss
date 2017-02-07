@@ -54,6 +54,18 @@ a.btn {
   }
 }
 
+.tabs .tab a {
+ color: white;
+}
+
+.tabs .tab a:hover, .tabs .tab a.active {
+ color: #3BAEA0 ;
+}
+
+.tabs .indicator {
+ background-color: #3BAEA0 ;
+}
+
 h1 a {
   color: black;
   &:hover {
@@ -64,6 +76,19 @@ h1 a {
 i.large {
   color: #3BAEA0;
 }
+
+.tabs .tab a {
+  color: white;
+}
+
+.tabs .tab a:hover, .tabs .tab a.active {
+  color: #3BAEA0;
+}
+
+.tabs .indicator {
+  background-color: #3BAEA0;
+}
+
 
 span.card-title.center {
   font-size: 3rem;
@@ -96,6 +121,7 @@ div.center-promo {
 .input-field label {
   color: black;
 }
+
 /* label focus color */
 .input-field input[type=text]:focus + label {
   color: black;
@@ -158,6 +184,17 @@ div.center-promo {
   color: black;
 }
 
+.favorites {
+  margin: 10px auto;
+}
+
+.card-content {
+  color: white;
+  p {
+  text-align: left;
+  }
+}
+
 .myButton {
   -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
   -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
@@ -210,7 +247,6 @@ div.center-promo {
   color: black;
 }
 
-
 .icon {
   height: 100px;
   width: 100px;
@@ -230,13 +266,29 @@ div.center-promo {
   align-items: center;
   flex-direction: column;
   margin-bottom: 10px;
-
 }
 
 .icon-row {
   display: flex;
 }
+
+.dashboard {
+  text-align: center;
+}
 .modules-label {
   font-size: 14px;
   color: black;
+}
+
+.favorites {
+  margin: 10px auto;
+}
+
+.card-content p {
+  text-align: left;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
 }

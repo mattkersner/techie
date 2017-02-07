@@ -9,7 +9,8 @@ module.exports = function(sequelize, DataTypes) {
     email: DataTypes.STRING(128),
     firstName: DataTypes.STRING,
     lastName: DataTypes.STRING,
-    github: DataTypes.STRING,
+    profile: DataTypes.STRING,
+    description: DataTypes.STRING,
     skills: DataTypes.STRING
   }, {
     classMethods: {
