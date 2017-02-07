@@ -2,6 +2,8 @@
 
 ![Tech.ie homepage](public/images/homepage.png)
 
+https://techie-micdrop.herokuapp.com/
+
 ##Description
 
 Our goal was to create a central place for fellow techies to rate and review the different technologies that they use. This would inform the community as to what technologies are trending, essential, obsolete, or just plain cool.
@@ -17,11 +19,29 @@ Users can click on a category icon from the home page to see all technologies in
 - JavaScript
 - JQuery
 - Express.js
+- PostgreSQL
 - EJS
 - Sequelize
 - Materialize
 - Github
 - Heroku
+
+##Dependencies/Installation Instructions
+
+- bcryptjs
+- body parser
+- cookie-parser
+- debug
+- dotenv
+- ejs
+- express
+- express-sessions
+- method-override
+- nodemon
+- passport
+- sequelize
+
+run npm install in terminal to install all dependencies. 
 
 ##Contributors
 
@@ -39,4 +59,20 @@ For future versions of the Tech.ie app, we would like to add the ability for the
 
 We would also like to add the ability for a user to login using their github profile, and to pull available data about a technology from the Github API.
 
+We would like to add the ability for a user to edit their profile information.
+
 Someday our app will have a search bar....
+
+##User Stories
+
+Our user are programmers who are using our app to find out what what technologies are trending, to find reviews on technologies they may be interested in, or to review a technology that they've used.
+
+[Link to our Zenhub boards with User stories](https://github.com/mattkersner/techie#boards?repos=80841283)
+
+##Wireframes
+
+![wireframe](public/images/wireframe1.jpg)
+![wireframe](public/images/wireframe2.jpg)
+![wireframe](public/images/wireframe3.jpg)
+
+
