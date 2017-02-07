@@ -1,6 +1,6 @@
 <% include ../partials/head.ejs %>
 <body>
-<% include ../partials/headercat.ejs %>
+<% include ../partials/headeredit.ejs %>
 <main>
 <div class="container" style="margin-top: 40px">
 <form action="<%= `/technologies/${tech.id}?_method=PUT` %>" method="POST">
@@ -45,9 +45,6 @@
   </div>
 </form>
 </div>
-<p><a href="<%= '/technologies' %>">Back to Technologies List</a></p>
-<p><a href="<%= '/categories' %>">Back to Categories</a></p>
-<p><a href="<%= '/' %>">Back to Home Page</a></p>
 </main>
 <% include ../partials/jsdefaults.ejs %>
 <script>
