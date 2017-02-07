@@ -1,19 +1,24 @@
-header {
-  font-family: 'Raleway', sans-serif; }
-
 body {
   font-family: 'Raleway', sans-serif; }
 
 button {
   cursor: pointer; }
 
-.nav-wrapper a {
-  color: black; }
+a.btn {
+  background-color: black; }
+  a.btn:hover {
+    background-color: grey; }
+
+.nav-wrapper {
+  padding-left: 5px;
+  padding-right: 5px; }
+  .nav-wrapper a {
+    color: black; }
 
 .collection-item a {
   color: black; }
   .collection-item a:hover {
-    color: orange; }
+    color: #3BAEA0; }
 
 .btn {
   background-color: black; }
@@ -30,13 +35,18 @@ button {
   flex-direction: row;
   justify-content: space-around; }
 
-.card {
-  background-color: #364F6B; }
-
 .card-content a {
   color: white; }
   .card-content a:hover {
-    color: cyan; }
+    color: #3BAEA0; }
+
+h1 a {
+  color: black; }
+  h1 a:hover {
+    color: #3BAEA0; }
+
+i.large {
+  color: #3BAEA0; }
 
 span.card-title.center {
   font-size: 3rem;

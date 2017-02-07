@@ -3,7 +3,7 @@
   <% include partials/head.ejs %>
   <body>
   <% include partials/header.ejs %>
-    <h1 class="center">Tech.isEveryone</h1>
+    <h1 class="center"><a class="modal-trigger" href="#modal1">Tech</a>.isEveryone</h1>
     <div class="parallax-container">
       <div class="parallax"><img src="images/background.jpg"></div>
     </div>
@@ -13,32 +13,31 @@
       <div class="col s4">
       <div class="center-promo">
         <i class="large material-icons">flash_on</i>
-        <p class="promo-caption">Speeds Up Development</p>
-        <p class="light-center">We did most of the heavy lifting for you
-        to provide a default stylings that incorporate our custom components.
-        Additionally, we refined animations and transitions to provide a smoother
-        experience for developers.</p>
+        <p class="promo-caption">Our Mission</p>
+        <p class="light-center">Our goal was to create a central place for fellow
+        techies to provide a commentary on the different technologies that they use.
+        This would inform the community as to what technologies are trending, essential,
+        obsolete, or just plain cool.</p>
       </div>
       </div>
       <div class="col s4">
       <div class="center-promo">
         <i class="large material-icons">group</i>
-        <p class="promo-caption">User Experience Focused</p>
-        <p class="light-center">By utilizing elements and principles of Material
-        Design, we were able to create a framework that incorporates components
-        and animations that provide more feedback to users. Additionally, a
-        single underlying responsive system across all platforms allow for a more
-        unified user experience.</p>
+        <p class="promo-caption">The Dev Community</p>
+        <p class="light-center">Developers are always drawing inspiration from one another.
+        Collaboration is a cornerstone of coding. It was immediately apparent to us that
+        the more opportunities the community has to interact and share their ideas, the more
+        everyone will benefit.</p>
       </div>
       </div>
       <div class="col s4">
       <div class="center-promo">
         <i class="large material-icons">settings</i>
-        <p class="promo-caption">Easy to Work With</p>
-        <p class="light-center">We have provided detailed documentation as well as
-        specific code examples to help new users get started. We are also always
-        open to feedback and can answer any questions a user may have about
-        Materialize.</p>
+        <p class="promo-caption">User Focused</p>
+        <p class="light-center">We designed Tech.ie with a focus on user experience and sleek
+        interfaces. Built by developers, for developers. We are hoping to make this an open source
+        application so that it can grow into the many possibilities that are apparent with this
+        of platform.</p>
       </div>
       </div>
     </div>
@@ -115,6 +114,21 @@
     <% if (user) { %>
     <button ><a href="/technologies/new">Add New Technology<i class="material-icons right">add</i></a></button>
     <% } %>
+
+<div id="modal1" class="modal bottom-sheet">
+    <div class="modal-content">
+      <h4>tech·ie<br>
+      /ˈtekē/</h4>
+      <p>noun - informal <br>
+         a person who is expert in or enthusiastic about technology, especially computing.<br><br>
+         Origin: <br>
+         1960s: from tech + -ie. First recorded as a US slang term for a technical college student, the word was later used as British service slang, denoting a technician. Sense 1 dates from the 1980s.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+  </div>
+
     <% include partials/jsdefaults.ejs %>
   </body>
 </html>
