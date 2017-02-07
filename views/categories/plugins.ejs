@@ -4,18 +4,18 @@
 <body>
 <% include ../partials/headercat.ejs %>
 <main>
-    <h1>Plugins:</h1>
-    <ol>
+    <h1 class="center">Plugins</h1>
+    <div class="center">
+     <a href="#!" class="btn" onclick="Materialize.showStaggeredList('#staggered')">Click Me</a>
+     </div>
+     <div class="container">
+    <ul id="staggered" class="collection">
     <% techs.forEach(function(data) { %>
-      <li><a href="<%= `/technologies/${data.id}` %>"><%= data.name %></a></li>
+      <li style="opacity: 0" class="center collection-item"><a href="<%= `/technologies/${data.id}` %>"><%= data.name %></a></li>
     <% }); %>
-    </ol>
+    </ul>
+    </div>
 </main>
-<div>
-  <a href="<%= '/categories' %>">Back to Categories</a>
-</div>
-<div>
-  <a href="<%= '/' %>">Back to Home</a>
-</div>
+<% include ../partials/jsdefaults.ejs %>
 </body>
 </html>
