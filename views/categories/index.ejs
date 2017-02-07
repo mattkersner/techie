@@ -9,7 +9,7 @@
       <div>
         <p><%= category.id %>:
           <a href="<%= `/categories/${category.name}` %>">
-            <%= category.name %>
+            <%= category.name.replace(/_/g, ' ') %>
           </a>
         </p>
       </div>
