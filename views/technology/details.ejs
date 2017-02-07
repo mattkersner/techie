@@ -12,6 +12,11 @@
         <a href="<%= technology.use_case %>">Use Case</a>
       </div>
       <div class="card-action">
+      <% if (!user) { %>
+        <div class="center">
+        <a href="<%= '/auth/login' %>">Login to edit this page or add to Favorites</a>
+        </div>
+      <% } %>
         <% if (user !== undefined) { %>
           <div class="flexButtons">
             <a href="<%= `/technologies/${technology.id}/edit` %>">
@@ -34,10 +39,6 @@
     </div>
   </div>
 </div>
-
-<% if (!user) { %>
-  <a href="<%= '/auth/login' %>">Login to edit this page or add to Favorites</a>
-<% } %>
 
 <div class="container">
 <h1 class="center">Reviews</h1>
