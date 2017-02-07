@@ -39,4 +39,4 @@ For future versions of the Tech.ie app, we would like to add the ability for the
 
 We would also like to add the ability for a user to login using their github profile, and to pull available data about a technology from the Github API.
 
-Someday, our app will have a search bar. 
+Someday our app will have a search bar....
