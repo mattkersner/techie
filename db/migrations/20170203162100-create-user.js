@@ -24,9 +24,12 @@ module.exports = {
       lastName: {
         type: Sequelize.STRING
       },
-      github: {
+      profile: {
         type: Sequelize.STRING
       },
+      description: {
+        type: Sequelize.STRING
+      }
       skills: {
         type: Sequelize.STRING
       },

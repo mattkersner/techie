@@ -74,13 +74,20 @@ div.center-promo {
   text-align: center; }
 
 .favorites {
-  margin: 0 auto;
+  margin: 10px auto;
   width: 30%; }
 
 .card {
   margin: 0 auto;
   width: 50%; }
+<<<<<<< HEAD
 >>>>>>> wtb design lessons pst
+=======
+  .card .card-content p {
+    text-align: left; }
+  .card .tab {
+    text-align: center; }
+>>>>>>> Altering user table and register form
 
 /* label color */
 .input-field label {

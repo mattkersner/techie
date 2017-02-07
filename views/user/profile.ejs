@@ -3,27 +3,27 @@
 <% include ../partials/headercat.ejs %>
   <main>
   <div class="dashboard">
-  <h1><%= user.username %></h1>
+  <h1><%= profile.username %></h1>
 
   <div class="card">
     <div class="card-content">
-      <p>Hello, my name is <%= profile.firstName %> <%= profile.lastName %>! This is my description section, which will be added to the register form :)</p>
+      <p>Hello, my name is <%= profile.firstName %> <%= profile.lastName %>! This is my description section, which will be added to the register form :) Birth emerged into consciousness star stuff harvesting star light Tunguska event! As a patch of light finite but unbounded explorations culture vanquish the impossible concept of the number one! Paroxysm of global death. Cambrian explosion, brain is the seed of intelligence, another world radio telescope laws of physics with pretty stories for which there's little good evidence venture ship of the imagination hearts of the stars rings of Uranus, inconspicuous motes of rock and gas at the edge of forever star stuff harvesting star light finite but unbounded the carbon in our apple pies encyclopaedia galactica. Drake Equation preserve and cherish that pale blue dot venture two ghostly white figures in coveralls and helmets are soflty dancing colonies explorations tesseract and billions upon billions upon billions upon billions upon billions upon billions upon billions!</p>
     </div>
     <div class="card-tabs">
       <ul class="tabs tabs-fixed-width">
-        <li class="tab"><a href="#test4">Toolbelt</a></li>
+        <li class="tab"><a href="#test4">Skills</a></li>
         <li class="tab"><a class="active" href="#test5">Github</a></li>
         <li class="tab"><a href="#test6">Email</a></li>
       </ul>
     </div>
     <div class="card-content grey lighten-4">
       <div id="test4"><%= profile.skills %></div>
-      <div id="test5"><%= profile.github %></div>
-      <div id="test6"><%= profile.email %></div>
+      <div id="test5"><a href="<%= profile.github %>"><%= profile.github %></a></div>
+      <div id="test6"><a href="mailto:<%= profile.email %>"><%= profile.email %></a></div>
     </div>
   </div>
 
-  <p>Favorite Technologies:</p>
+  <h3>Favorite Technologies:</h3>
   <div class="collection favorites">
     <% faves.forEach((fave) => { %>
 

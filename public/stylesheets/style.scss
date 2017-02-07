@@ -210,7 +210,6 @@ div.center-promo {
   color: black;
 }
 
-
 .icon {
   height: 100px;
   width: 100px;
@@ -239,4 +238,20 @@ div.center-promo {
 .modules-label {
   font-size: 14px;
   color: black;
+}
+
+.favorites {
+  margin: 10px auto;
+  width: 30%;
+}
+
+.card {
+  margin: 0 auto;
+  width: 50%;
+  .card-content p {
+    text-align: left;
+  }
+  .tab {
+    text-align: center;
+  }
 }

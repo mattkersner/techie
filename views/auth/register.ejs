@@ -6,31 +6,35 @@
       <form class="col s12" action="/auth/register" method="post">
         <div class="input-field">
           <label for="username">Username:</label>
-          <input type="text" name="username">
+          <input type="text" name="username" required>
         </div>
         <div class="input-field">
           <label for="password">Password:</label>
-          <input type="password" name="password">
+          <input type="password" name="password" required>
         </div>
         <div class="input-field">
           <label for="firstName">First Name:</label>
-          <input type="text" name="firstName">
+          <input type="text" name="firstName" required>
         </div>
         <div class="input-field">
           <label for="lastName">Last Name:</label>
-          <input type="text" name="lastName">
+          <input type="text" name="lastName" required>
         </div>
         <div class="input-field">
           <label for="email">Email:</label>
-          <input type="text" name="email">
+          <input type="text" name="email" required>
         </div>
         <div class="input-field">
-          <label for="github">Github Link:</label>
-          <input type="text" name="github">
+          <label for="description">Tell us about yourself:</label>
+          <input type="text" name="profile" required>
+        </div class="input-field">
+        <div class="input-field">
+          <label for="profile">Profile Page:</label>
+          <input type="text" name="profile" placeholder="github, portfolio, blog..." required>
         </div class="input-field">
         <div class="input-field">
           <label for="skills">Skills:</label>
-          <input type="text" name="skills">
+          <input type="text" name="skills" placeholder="UX, server logic, page design.." required>
         </div>
         <div>
           <button class="btn waves-effect waves-light" type="submit" name="action">Submit
