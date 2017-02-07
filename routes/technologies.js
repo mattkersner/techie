@@ -100,7 +100,10 @@ router.delete('/:id/reviews/:rid', function(req, res) {
 
 router.get('/:id/reviews/:rid/edit', function(req, res) {
   models.Reviews.findById(req.params.rid).then(function(review) {
-  res.render('review/edit', { review: review });
+  res.render('review/edit', {
+    review: review,
+    user: req.user
+    });
   });
 });
 
