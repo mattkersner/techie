@@ -16,6 +16,13 @@ textarea.materialize-textarea:focus:not([readonly]) {
 textarea.materialize-textarea:focus:not([readonly]) + label {
   color: black; }
 
+.promo-caption {
+  font-size: 1.7rem; }
+
+div.center-promo {
+  text-align: center;
+  margin-top: 20px; }
+
 /* label color */
 .input-field label {
   color: black; }
