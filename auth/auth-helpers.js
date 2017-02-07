@@ -21,7 +21,8 @@ function createUser(req, res) {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
     email: req.body.email,
-    github: req.body.github,
+    profile: req.body.profile,
+    description: req.body.description,
     skills: req.body.skills
   });
 }
