@@ -14,6 +14,38 @@ router.get('/', authHelpers.loginRequired, reviews.dashReviews, faveHelpers.find
   });
 });
 
+router.get('/:id/edit', authHelpers.loginRequired, (req, res, next) => {
+  res.render('user/edit', {
+    user: req.user.dataValues
+  });
+});
+
+router.put('/:id/edit', authHelpers.loginRequired, (req, res, next) => {
+  models.User.update({
+    username: req.body.username,
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    email: req.body.email,
+    description: req.body.description,
+    profile: req.body.profile,
+    skills: req.body.skills
+  }, { where: { id: req.params.id} }).then(() => {
+    res.redirect(`/user/`);
+  });
+});
+
+router.put('/:id', function(req, res, next) {
+  models.Technology.update({
+    name: req.body.name,
+    description: req.body.description,
+    documentation: req.body.documentation,
+    use_case: req.body.use_case,
+    category_name: req.body.category_name
+  }, { where: { id: req.params.id} }).then(() => {
+    res.redirect(`/technologies/${req.params.id}`);
+  });
+});
+
 // user deletes favorites from their dashboard
 router.delete('/:id', function(req, res, next) {
   models.Favorites.destroy({
