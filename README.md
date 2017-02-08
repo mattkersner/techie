@@ -59,8 +59,6 @@ For future versions of the Tech.ie app, we would like to add the ability for the
 
 We would also like to add the ability for a user to login using their github profile, and to pull available data about a technology from the Github API.
 
-We would like to add the ability for a user to edit their profile information.
-
 Someday our app will have a search bar....
 
 ##User Stories
@@ -74,5 +72,7 @@ Our user are programmers who are using our app to find out what what technologie
 ![wireframe](public/images/wireframe1.jpg)
 ![wireframe](public/images/wireframe2.jpg)
 ![wireframe](public/images/wireframe3.jpg)
+![wireframe](public/images/wireframe4.jpg)
+![wireframe](public/images/wireframe5.jpg)
 
 
