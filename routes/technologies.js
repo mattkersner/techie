@@ -26,7 +26,7 @@ router.post('/',function(req, res, next) {
     use_case: req.body.use_case,
     category_name: req.body.category_name
   }).then(function() {
-    res.redirect('/technologies');
+    res.redirect(`/categories/${req.body.category_name}`);
   });
 });
 
@@ -113,6 +113,14 @@ router.put('/:id/reviews/:rid/edit', function(req, res, next) {
     review_text: req.body.review_text,
   }, { where: {id: req.params.rid} }).then(() => {
     res.redirect(`/technologies/${req.params.id}`);
+  });
+});
+
+router.delete('/delete/:id', function(req, res) {
+  models.Technology.destroy({
+    where: { id: req.params.id }
+  }).then(function() {
+    res.redirect(`/user`);
   });
 });
 

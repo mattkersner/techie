@@ -8,10 +8,10 @@
       <div class="row">
         <div class="input-field col s6">
           <label class="active">Name</label>
-          <input type="text" name="name" />
+          <input type="text" name="name" required />
         </div>
         <div class="input-field col s6">
-          <select id="category" name="category_name">
+          <select id="category" name="category_name" required>
             <option value="" disabled selected>Choose a category</option>
             <option value="Languages">Language</option>
             <option value="Libraries">Library</option>
@@ -28,11 +28,11 @@
         </div>
         <div class="input-field col s12">
           <label for="textarea1">Description</label><br/>
-          <textarea id="textarea1" class="materialize-textarea" name="description"></textarea>
+          <textarea id="textarea1" class="materialize-textarea" name="description" required></textarea>
         </div>
         <div class="input-field col s4">
           <label for="documentation">Link to Official Documentation</label><br/>
-          <input class="materialize-textarea" type="text" name="documentation"></textarea>
+          <input class="materialize-textarea" type="text" name="documentation" required></textarea>
         </div>
         <div class="input-field col s4">
           <label for="use_case">Use-Case of Technology</label><br/>
