@@ -30,24 +30,25 @@
 </div>
 </div>
 <!-- Favorite List -->
-  <h3 class="center">Fave Techs</h3>
+<div class="flexManagers">
   <div class="container" style="margin-top: 20px">
+  <h3 class="center">Fave Techs</h3>
     <div class="col s12 m6">
-      <div class="collection favorites center">
+      <ul class="fav collection favorites center">
         <% faves.forEach((fave) => { %>
 
-          <a href="/technologies/<%= fave.id %>" class="collection-item">
+          <a href="/technologies/<%= fave.id %>" class="collection-item"><li>
             <%= fave.name %> - <%= fave.category_name.replace(/_/g, ' ') %>
-          </a>
+          </li></a>
 
         <% }) %>
-      </div>
+      </ul>
     </div>
   </div>
 <!-- Review List -->
 <div class="container">
   <h3 class="center">Reviews by <%= profile.username %></h3>
-    <ul class="collection">
+    <ul class="rev collection">
       <% reviews.forEach((review) => { %>
       <li class="collection-item avatar">
         <i class="material-icons circle cyan">account_circle</i>
@@ -63,7 +64,7 @@
       <% }) %>
     </ul>
   </div>
-
+</div>
   </main>
   <% include ../partials/jsdefaults.ejs %>
 </body>

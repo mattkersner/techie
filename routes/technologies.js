@@ -94,7 +94,7 @@ router.delete('/:id/reviews/:rid', function(req, res) {
   models.Reviews.destroy({
     where: { id: req.params.rid }
   }).then(function(review) {
-    res.redirect(`/technologies/${req.params.id}`);
+    res.redirect(`/user`);
   });
 });
 

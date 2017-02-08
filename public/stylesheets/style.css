@@ -20,6 +20,19 @@ a.btn {
   .collection-item a:hover {
     color: #3BAEA0; }
 
+.flexManagers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+ul.fav {
+  width: 80%;
+  margin: 0 auto; }
+
+ul.rev {
+  width: 90%;
+  margin: 0 auto; }
+
 .btn {
   background-color: black; }
   .btn:hover {
@@ -247,6 +260,10 @@ div.center-promo {
   text-align: left; }
 
 .flex {
+  display: flex;
+  justify-content: space-between; }
+
+.flexButtons {
   display: flex;
   justify-content: space-between; }
 
