@@ -40,7 +40,7 @@ a.btn {
   .card-content a:hover {
     color: #3BAEA0; }
 
-.card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
   text-transform: none; }
 
 .tabs .tab a {

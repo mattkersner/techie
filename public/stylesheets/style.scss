@@ -54,7 +54,7 @@ a.btn {
   }
 }
 
-.card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
   text-transform: none;
 }
 
