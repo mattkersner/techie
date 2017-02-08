@@ -27,8 +27,22 @@ function dashReviews(req, res, next) {
   });
 }
 
+function profileReviews(req, res, next) {
+  // retrieve profile users faves
+  models.sequelize.query('SELECT "Reviews"."title", "Reviews"."review_text", "Reviews"."user_id", "Reviews"."id", "Technologies"."id" AS "tech_id", "Technologies"."name" AS "tech_name", "Users"."username" FROM "Reviews" JOIN "Users" ON "Reviews"."user_id" = "Users"."id" JOIN "Technologies" ON "Reviews"."tech_id" = "Technologies"."id" WHERE "Users"."id" = :id', {
+    // WHERE :id is id of user profile
+    replacements: { id: req.params.id },
+    type: models.sequelize.QueryTypes.SELECT
+  }).then((reviews) => {
+    // setting res.locals to access
+    res.locals.reviews = reviews;
+    return next();
+  });
+}
+
 // exporting the function
 module.exports = {
   getReviews,
-  dashReviews
+  dashReviews,
+  profileReviews
 }
