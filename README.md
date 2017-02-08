@@ -8,7 +8,7 @@ https://techie-micdrop.herokuapp.com/
 
 Our goal was to create a central place for fellow techies to rate and review the different technologies that they use. This would inform the community as to what technologies are trending, essential, obsolete, or just plain cool.
 
-Users can click on a category icon from the home page to see all technologies in that category. They can view, review or add a new technology. they can also add a technology to their personal list of favorite technologies. 
+Users can click on a category icon from the home page to see all technologies in that category. They can view, review or add a new technology. They can also add a technology to their personal list of favorite technologies. 
 
 ![Category icons](public/images/caticons.png)
 
