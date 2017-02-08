@@ -56,12 +56,13 @@ router.delete('/:id', function(req, res, next) {
 });
 
 // individual user profiles
-router.get('/:id', faveHelpers.profileFaves, function(req, res, next) {
+router.get('/:id', faveHelpers.profileFaves, reviews.profileReviews, function(req, res, next) {
   models.User.findById(req.params.id).then(function(profile) {
     res.render('user/profile', {
       profile: profile,
-      user: req.user.dataValues, // if user not logged in, this throws errors since nothing is being passed in..
-      faves: res.locals.faves
+      user: req.user.dataValues,
+      faves: res.locals.faves,
+      reviews: res.locals.reviews
     });
   });
 });
