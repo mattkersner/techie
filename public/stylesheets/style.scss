@@ -28,6 +28,22 @@ a.btn {
   }
 }
 
+.flexManagers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+ul.fav {
+  width: 80%;
+  margin: 0 auto;
+}
+
+ul.rev {
+  width: 90%;
+  margin: 0 auto;
+}
+
 .btn {
   background-color: black;
   &:hover {
@@ -293,6 +309,11 @@ div.center-promo {
 }
 
 .flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flexButtons {
   display: flex;
   justify-content: space-between;
 }

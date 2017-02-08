@@ -29,19 +29,22 @@
           <label for="textarea1">Description</label><br/>
           <textarea id="textarea1" class="materialize-textarea" name="description"><%= tech.description %></textarea>
         </div>
-        <div class="input-field col s4">
+        <div class="input-field col s6">
           <input type="text" class="materialize-textarea" name="documentation" value="<%= tech.documentation %>">
           <label for="documentation" class="active">Link to Official Documentation</label>
         </div>
-        <div class="input-field col s4">
+        <div class="input-field col s6">
           <input type="text" class="materialize-textarea" name="use_case" value="<%= tech.use_case %>">
           <label for="use_case" class="active">Use-Case of Technology</label>
         </div>
-        <div class="input-field col s4">
+        <div class="flexButtons input-field col s4">
         <button class="btn waves-effect waves-light" type="submit" value="update" style="margin-bottom: 10px">Update Technology
         <i class="material-icons right">add</i>
         </button>
-      </div>
+        <div>
+          <a class="btn waves-effect waves-light" href="../../technologies/<%= tech.id %>" style="margin-left: 10px">Cancel</a>
+        </div>
+        </div>
   </div>
 </form>
 </div>
