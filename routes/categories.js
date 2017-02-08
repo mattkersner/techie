@@ -20,7 +20,7 @@ router.get('/Languages', function(req, res, next) {
   models.Technology.findAll({
     where: { category_name: 'Languages' }
   }).then((data) => {
-      res.render('categories/Language', {
+      res.render('categories/language', {
       techs: data,
       user: req.user
     });

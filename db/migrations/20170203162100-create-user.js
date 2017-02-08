@@ -29,7 +29,7 @@ module.exports = {
       },
       description: {
         type: Sequelize.STRING
-      }
+      },
       skills: {
         type: Sequelize.STRING
       },

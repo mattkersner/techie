@@ -11,7 +11,10 @@
           Your Info
         </span>
         <p>Name: <%= user.firstName %> <%= user.lastName %><br />
-          <%= user.description %>
+          <%= user.description %><br />
+          <a href="<%= `/user/${user.id}/edit` %>">
+          <button class="myButton" type="submit" name="action" style="margin-top: 10px">Edit
+          </button></a>
         </p>
       </div>
       <div class="card-tabs">

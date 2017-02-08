@@ -1,5 +1,6 @@
 {
   "development": {
+    "username": "mattkersner",
     "password": null,
     "database": "techie_app_development",
     "host": "127.0.0.1",
