@@ -32,10 +32,12 @@
             <button class="myButton">
               <a style="color: #777777; margin-right: 0;" href='../reviews/<%= technology.id %>'>Review
               </a>
+           <% if (user.username === "IndifferentSon") { %>
             </button>
             <form action="<%= `/technologies/delete/${technology.id}?_method=DELETE` %>" method="POST">
             <button class="myButton" type="submit">Delete</button>
             </form>
+            <% } %>
         <% } %>
       </div>
       </div>
