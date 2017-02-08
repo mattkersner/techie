@@ -7,7 +7,7 @@
       <div class="card-content white-text">
         <span class="card-title center" style="margin-bottom: 20px"><%= technology.name %></span>
         <p style="font-size: 1.1em"><%= technology.description %></p><br>
-        <p>Category: <%= technology.category_name %></p>
+        <p>Category: <%= technology.category_name.replace(/_/g, ' ') %></p>
         <a href="<%= technology.documentation %>">Official Documentation</a><br>
         <a href="<%= technology.use_case %>">Use Case</a>
       </div>
