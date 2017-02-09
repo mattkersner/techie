@@ -2,6 +2,8 @@
 
 ![Tech.ie homepage](public/images/homepage.png)
 
+##Link to Tech.ie Deployed
+
 https://techie-micdrop.herokuapp.com/
 
 ##Description
