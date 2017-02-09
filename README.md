@@ -4,13 +4,13 @@
 
 ##Link to Tech.ie Deployed
 
-https://techie-micdrop.herokuapp.com/
+[Tech.ie](https://techie-micdrop.herokuapp.com/)
 
 ##Description
 
-Our goal was to create a central place for fellow techies to rate and review the different technologies that they use. This would inform the community as to what technologies are trending, essential, obsolete, or just plain cool.
+Our goal was to create a central place for fellow techies to rate and review the different technologies that they use. This would inform the community as to what technologies are trending, essential, obsolete, or just plain cool. Built by developers, for developers, we hope for this app to be an extension of the developer community and conducive to collaboration.
 
-Users can click on a category icon from the home page to see all technologies in that category. They can view, review or add a new technology. They can also add a technology to their personal list of favorite technologies. 
+Registered users can click on a category icon from the home page to see all technologies in that category. They can view, review or add a new technology. They also have access to their personal Tech.ie dashboard, which displays a user's profile information, favorite technologies, and reviews that they have posted. It is built for mobile and ready to grow!
 
 ![Category icons](public/images/caticons.png)
 
@@ -43,11 +43,7 @@ Users can click on a category icon from the home page to see all technologies in
 - passport
 - sequelize
 
-run npm install in terminal to install all dependencies. 
-
-##Contributors
-
-Matt Kersner, Jerel Crespo, Mimi Klein (aka, Team Mic Drop)
+Run npm install in terminal to install all dependencies. 
 
 ##Build Strategy
 
@@ -69,7 +65,11 @@ Someday our app will have a search bar....
 
 Our user are programmers who are using our app to find out what what technologies are trending, to find reviews on technologies they may be interested in, or to review a technology that they've used.
 
-[Link to our Zenhub boards with User stories](https://github.com/mattkersner/techie#boards?repos=80841283)
+[Our Zenhub boards with User Stories](https://github.com/mattkersner/techie#boards?repos=80841283)
+
+##Contributors
+
+Matt Kersner, Jerel Crespo, Mimi Klein (aka, Team Mic Drop).
 
 ##Wireframes
 
