@@ -270,4 +270,26 @@ div.center-promo {
   display: flex;
   justify-content: space-between; }
 
+.flexFooter {
+  display: flex;
+  justify-content: space-between; }
+  .flexFooter p {
+    font-size: .9em;
+    margin-top: 10px; }
+  .flexFooter .fa-copyright {
+    font-size: .8em; }
+  .flexFooter .fa-github-alt {
+    color: black;
+    margin-right: 25px; }
+    .flexFooter .fa-github-alt:hover {
+      color: #3BAEA0; }
+
+footer {
+  margin-top: 20px;
+  background-color: #F5F5F5;
+  padding: 10px;
+  box-sizing: inherit;
+  box-shadow: 0px -1px 3px rgba(50, 50, 50, 0.4);
+  border-top: 1px solid #B2B2B2; }
+
 /*# sourceMappingURL=style.css.map */

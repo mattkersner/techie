@@ -5,13 +5,10 @@
 <% include ../partials/headercat.ejs %>
 <main>
     <h1 class="center">Collaboration Tools</h1>
-    <div class="center">
-     <a href="#!" class="btn" onclick="Materialize.showStaggeredList('#staggered')">Click Me</a>
-     </div>
      <div class="container">
     <ul id="staggered" class="collection">
     <% techs.forEach(function(data) { %>
-      <li style="opacity: 0" class="center collection-item"><a href="<%= `/technologies/${data.id}` %>"><%= data.name %></a></li>
+      <li class="center collection-item"><a style="font-size: 1.2em;" href="<%= `/technologies/${data.id}` %>"><%= data.name %></a></li>
     <% }); %>
     </ul>
     </div>

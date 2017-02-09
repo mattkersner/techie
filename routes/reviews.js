@@ -4,7 +4,7 @@ const models = require('../db/models/index');
 
 
 //get route to render the review form
-//using params to pass the tech_id to the db
+//using params to pass the tech_id to the view
 router.get('/:id', function(req, res) {
   res.render('review/reviewform', {tech_id: req.params.id, user: req.user });
 });
@@ -15,7 +15,6 @@ router.get('/:id/edit', function(req, res) {
 
 //post route to add review info to Reviews model
 router.post('/', function(req, res) {
-  console.log(req.body);
   models.Reviews.create({
     user_id: req.user.id,
     tech_id: req.body.techId,

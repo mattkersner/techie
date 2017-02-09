@@ -27,6 +27,7 @@ router.get('/login', authHelpers.loginRedirect, (req, res) => {
   });
 });
 
+//using passport middleware to authenticate username and password match
 router.post('/login', passport.authenticate('local', {
   successRedirect: '/user',
   failureRedirect: '/auth/login',
