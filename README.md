@@ -1,12 +1,12 @@
-#Tech.ie
+# Tech.ie
 
 ![Tech.ie homepage](public/images/homepage.png)
 
-##Link to Tech.ie Deployed
+## Link to Tech.ie Deployed
 
 [Tech.ie](https://techie-micdrop.herokuapp.com/)
 
-##Description
+## Description
 
 Our goal was to create a central place for fellow techies to rate and review the different technologies that they use. This would inform the community as to what technologies are trending, essential, obsolete, or just plain cool. Built by developers, for developers, we hope for this app to be an extension of the developer community and conducive to collaboration.
 
@@ -14,7 +14,7 @@ Registered users can click on a category icon from the home page to see all tech
 
 ![Category icons](public/images/caticons.png)
 
-##Technologies Used
+## Technologies Used
 
 - HTML
 - Sass
@@ -28,7 +28,7 @@ Registered users can click on a category icon from the home page to see all tech
 - Github
 - Heroku
 
-##Dependencies/Installation Instructions
+## Dependencies/Installation Instructions
 
 - bcryptjs
 - body parser
@@ -45,11 +45,11 @@ Registered users can click on a category icon from the home page to see all tech
 
 Run npm install in terminal to install all dependencies. 
 
-##Build Strategy
+## Build Strategy
 
 Once the idea came to us, we started by wireframing our app and thinking about our user stories. Then we defined all of our database tables and drew up our ERD and relationships. After all of our planning was complete, we divvied up the work. Matt worked on user registration and auth, Mimi worked on our technologies table, and Jerel worked on our categories and favorites tables. Once all those were up and running, we worked together from that point forward in defining all of our routes, grabbing and rendering all of our data from the database, adding CRUD functionality and styling. We were systematic and thorough, and that led to the app-store ready application you see before you. 
 
-##Complications/Future Improvements
+## Complications/Future Improvements
 
 Github flow was a challenge at times. We had some merge conflicts that were tricky to navigate. Sequelize can be a bit tricky as well, and the documentation can be hard to decipher. 
 
@@ -59,17 +59,17 @@ We would also like to add the ability for a user to login using their github pro
 
 Someday our app will have a search bar....
 
-##User Stories
+## User Stories
 
 Our users are programmers who are using our app to find out what what technologies are trending, to find reviews on technologies they may be interested in, or to review a technology that they've used.
 
 [Our Zenhub boards with User Stories](https://github.com/mattkersner/techie#boards?repos=80841283)
 
-##Contributors
+## Contributors
 
 Matt Kersner, Jerel Crespo, Mimi Klein (aka, Team Mic Drop).
 
-##Wireframes
+## Wireframes
 
 ![wireframe](public/images/wireframe1.jpg)
 ![wireframe](public/images/wireframe2.jpg)
